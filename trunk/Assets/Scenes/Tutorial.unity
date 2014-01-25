@@ -1957,6 +1957,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 31a827bafeefecf459e8fa090559830c, type: 2}
+      propertyPath: enableHeadTossing
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31a827bafeefecf459e8fa090559830c, type: 2}
   m_RootGameObject: {fileID: 1424628931}
@@ -6691,6 +6695,7 @@ MonoBehaviour:
   headHopper: {fileID: 790470678}
   throwForce: 35
   distanceFromBodyBeforePickingUp: 3
+  enableHeadTossing: 0
 --- !u!114 &1424628941
 MonoBehaviour:
   m_ObjectHideFlags: 0

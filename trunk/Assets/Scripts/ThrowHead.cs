@@ -8,6 +8,7 @@ public class ThrowHead : MonoBehaviour
 	[SerializeField] HopHead headHopper;
 	[SerializeField] float throwForce = 30;
 	[SerializeField] float distanceFromBodyBeforePickingUp = 2;
+	[SerializeField] bool enableHeadTossing = true;
 	SimpleMouseRotator[] allMouseRotationScripts;
 	FirstPersonHeadBob[] allHeadBobScripts;
 
@@ -79,7 +80,7 @@ public class ThrowHead : MonoBehaviour
 		// Check if head is attached
 		if(isHeadAttached == true)
 		{
-			if(fireButtonPressed == true)
+			if((enableHeadTossing == true) && (fireButtonPressed == true))
 			{
 				permanentlyAttachedCamera.SetActive(false);
 				temporarilyAttachedCamera.gameObject.SetActive(true);
