@@ -2,6 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public class HopHead : MonoBehaviour {
 	public float upForce = 10;
 	public float forwardForce = 10;
@@ -38,6 +39,8 @@ public class HopHead : MonoBehaviour {
 	{
 		cameraEffect1.enabled = false;
 		cameraEffect2.enabled = false;
+		audio.Stop();
+		audio.Play();
 	}
 	
 	// Update is called once per frame
