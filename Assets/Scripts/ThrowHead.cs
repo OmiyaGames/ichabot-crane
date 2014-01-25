@@ -94,6 +94,7 @@ public class ThrowHead : MonoBehaviour
 				{
 					headBob.enabled = false;
 				}
+				headHopper.TossHead();
 				isHeadAttached = false;
 			}
 		}
