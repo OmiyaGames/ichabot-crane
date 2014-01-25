@@ -51,6 +51,11 @@ public class PauseMenu : MonoBehaviour
 			mText = message;
 		}
 		
+		public void HideMessage()
+		{
+			mTimeFirstAppeared = -1f;
+		}
+
 		public void ShowLastMessage()
 		{
 			mTimeFirstAppeared = Time.time;
@@ -100,7 +105,7 @@ public class PauseMenu : MonoBehaviour
 	public GUISkin skin = null;
 
 	private Rect mTempRect = new Rect(0, 0, 0, 0);
-		
+
 	public static void ShowMessage(string message)
 	{
 		if((msInstance != null) && (msInstance.popUpSettings != null))
@@ -109,6 +114,14 @@ public class PauseMenu : MonoBehaviour
 		}
 	}
 	
+	public static void HideMessage()
+	{
+		if((msInstance != null) && (msInstance.popUpSettings != null))
+		{
+			msInstance.popUpSettings.HideMessage();
+		}
+	}
+
 	void Awake()
 	{
 		msInstance = this;

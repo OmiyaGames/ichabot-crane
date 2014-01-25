@@ -409,7 +409,6 @@ MonoBehaviour:
   headHopper: {fileID: 11400022}
   throwForce: 35
   distanceFromBodyBeforePickingUp: 3
-  pickupText: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -665,7 +664,7 @@ MonoBehaviour:
     appearLength: 3
     appearSpeed: 5
     popUpWidth: 500
-    popUpHeight: 100
+    popUpHeight: 50
     popUpMargin: 20
   skin: {fileID: 11400000, guid: cecb4ab2e149fcf40b39716aea5acc12, type: 2}
 --- !u!124 &12400000
