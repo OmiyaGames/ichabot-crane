@@ -119,7 +119,7 @@ public class PauseMenu : MonoBehaviour
 		GUI.skin = skin;
 		SceneTransition transition = Singleton.Get<SceneTransition>();
 		popUpSettings.Display(ref mTempRect, Time.deltaTime, transition);
-		if((Fisher.Instance != null) && (Fisher.Instance.IsPaused == true) && (transition.State == SceneTransition.Transition.NotTransitioning))
+		if((ThrowHead.IsPaused == true) && (transition.State == SceneTransition.Transition.NotTransitioning))
 		{
 			DisplayPauseMenu(mTempRect, transition);
 		}
@@ -169,7 +169,9 @@ public class PauseMenu : MonoBehaviour
 		buttonRect.y -= buttonRect.height;
 		if(GUI.Button(buttonRect, "Continue") == true)
 		{
-			Fisher.Instance.IsPaused = false;
+			Time.timeScale = 1;
+			Screen.lockCursor = true;
+			ThrowHead.IsPaused = false;
 		}
 	}
 }

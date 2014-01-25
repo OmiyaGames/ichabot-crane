@@ -14,6 +14,7 @@ public class ThrowHead : MonoBehaviour
 
 	bool isHeadAttached = true;
 	bool isFireButtonDown = false;
+	static bool isPaused = false;
 
 	public bool IsHeadAttached
 	{
@@ -31,11 +32,24 @@ public class ThrowHead : MonoBehaviour
 		}
 	}
 
+	public static bool IsPaused
+	{
+		get
+		{
+			return isPaused;
+		}
+		set
+		{
+			isPaused = value;
+		}
+	}
+
 	void Start()
 	{
 		pickupText.enabled = false;
 		allMouseRotationScripts = GetComponentsInChildren<SimpleMouseRotator>();
 		allHeadBobScripts = GetComponentsInChildren<FirstPersonHeadBob>();
+		isPaused = false;
 		Screen.lockCursor = true;
 	}
 
@@ -55,6 +69,13 @@ public class ThrowHead : MonoBehaviour
 		else
 		{
 			isFireButtonDown = false;
+		}
+
+		if(Input.GetKey(KeyCode.Escape) == true)
+		{
+			isPaused = true;
+			Time.timeScale = 0;
+			Screen.lockCursor = false;
 		}
 
 		// Check if head is attached
