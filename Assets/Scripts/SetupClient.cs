@@ -11,9 +11,12 @@ public class SetupClient : MonoBehaviour
 	}
 
 	static SetupClient instance = null;
+	public float speed = 1;
+	public GameObject prefab;
 	State currentState = State.AwaitingInput;
 	Rect fullRect;
 	Rect tempRect;
+	Transform cube;
 	string ipAddress = string.Empty;
 
 	void Start()
@@ -26,6 +29,14 @@ public class SetupClient : MonoBehaviour
 		else
 		{
 			GameObject.Destroy(gameObject);
+		}
+	}
+
+	void Update()
+	{
+		if(currentState == State.Connected)
+		{
+			cube.Translate(Vector3.right * Input.GetAxis("Horizontal") * speed);
 		}
 	}
 
@@ -75,7 +86,10 @@ public class SetupClient : MonoBehaviour
 
 	void OnConnectedToServer()
 	{
+		GameObject clone = (GameObject)Network.Instantiate(prefab, Vector3.zero, Quaternion.identity, 1);
+		cube = clone.transform;
 		currentState = State.Connected;
+		Network.SetSendingEnabled(0, true);
 	}
 
 	void OnFailedToConnect(NetworkConnectionError error)
