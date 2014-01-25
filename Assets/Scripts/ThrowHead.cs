@@ -10,7 +10,6 @@ public class ThrowHead : MonoBehaviour
 	[SerializeField] float distanceFromBodyBeforePickingUp = 2;
 	[SerializeField] bool enableHeadTossing = true;
 	SimpleMouseRotator[] allMouseRotationScripts;
-	FirstPersonHeadBob[] allHeadBobScripts;
 
 	bool isHeadAttached = true;
 	bool isFireButtonDown = false;
@@ -47,7 +46,6 @@ public class ThrowHead : MonoBehaviour
 	void Start()
 	{
 		allMouseRotationScripts = GetComponentsInChildren<SimpleMouseRotator>();
-		allHeadBobScripts = GetComponentsInChildren<FirstPersonHeadBob>();
 		isPaused = false;
 		Screen.lockCursor = true;
 	}
@@ -91,10 +89,6 @@ public class ThrowHead : MonoBehaviour
 				{
 					rotator.enabled = false;
 				}
-				foreach(FirstPersonHeadBob headBob in allHeadBobScripts)
-				{
-					//headBob.enabled = false;
-				}
 				headHopper.TossHead();
 				isHeadAttached = false;
 			}
@@ -112,10 +106,6 @@ public class ThrowHead : MonoBehaviour
 				foreach(SimpleMouseRotator rotator in allMouseRotationScripts)
 				{
 					rotator.enabled = true;
-				}
-				foreach(FirstPersonHeadBob headBob in allHeadBobScripts)
-				{
-					//headBob.enabled = true;
 				}
 				isHeadAttached = true;
 				PauseMenu.HideMessage();
