@@ -5,12 +5,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 3
+  serializedVersion: 4
   m_Component:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400000}
   - 65: {fileID: 6500000}
   - 114: {fileID: 11400002}
   - 54: {fileID: 5400000}
@@ -20,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400000
 Transform:
   m_ObjectHideFlags: 1
@@ -50,6 +49,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -84,16 +86,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.00000072, y: 1.23391771, z: 4.88644886}
   m_Center: {x: -1.24398397e-07, y: .0217340048, z: .272111088}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33caf508d53355418aeba77a16675a0, type: 1}
-  m_Name: 
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,8 +94,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccc31d5d74a903040abefd8e035ee040, type: 1}
+  m_Script: {fileID: 11500000, guid: ccc31d5d74a903040abefd8e035ee040, type: 3}
   m_Name: 
+  m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 1}
   speed: 90
 --- !u!1001 &100100000

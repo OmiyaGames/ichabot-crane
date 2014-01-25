@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
   - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+  - enabled: 1
     path: Assets/Scenes/Debug.unity
   - enabled: 1
     path: Assets/Scenes/AM_debug.unity
