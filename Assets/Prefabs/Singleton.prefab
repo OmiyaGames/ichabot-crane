@@ -32,22 +32,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &100004
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 400004}
-  - 114: {fileID: 11400004}
-  m_Layer: 0
-  m_Name: RandomizerSetup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &100006
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,19 +90,7 @@ Transform:
   - {fileID: 400006}
   - {fileID: 400008}
   - {fileID: 400000}
-  - {fileID: 400004}
   m_Father: {fileID: 0}
---- !u!4 &400004
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 400002}
 --- !u!4 &400006
 Transform:
   m_ObjectHideFlags: 1
@@ -279,28 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f894ee0c5c76fee42a3cc4bde50cf089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11400004
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1812e0675c37a2e4084644299ec0d3bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allTextures:
-  - {fileID: 2800000, guid: b959d22def18ad347b47516397f98e5e, type: 3}
-  - {fileID: 2800000, guid: 9207816e7597e034c90539f5b79ad9e7, type: 3}
-  - {fileID: 2800000, guid: cdebe92a03eb1474e9f58f4ac56673e6, type: 3}
-  - {fileID: 2800000, guid: ae1fa0425163c4f4a8bc05e5dbdc2a76, type: 3}
-  - {fileID: 2800000, guid: 9f909dc25a3ee7c409a147cb69f28c94, type: 3}
-  - {fileID: 2800000, guid: 10282746c914abc489c63aa1862d008b, type: 3}
-  - {fileID: 2800000, guid: 087e8b6648f0cb640a4e78f0d12bcd7c, type: 3}
-  - {fileID: 2800000, guid: 66b978536b7bfce449d79e9e1e2c054a, type: 3}
-  - {fileID: 2800000, guid: ccf5b7799c417b543854f1f43681c5f3, type: 3}
-  - {fileID: 2800000, guid: fdabd7376474bb64f95b6b7d2a3fa29d, type: 3}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
