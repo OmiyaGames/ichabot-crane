@@ -7,8 +7,9 @@ public class ThrowHead : MonoBehaviour
 	[SerializeField] SimpleMouseRotator temporarilyAttachedCamera;
 	[SerializeField] float throwForce = 30;
 	[SerializeField] float distanceFromBodyBeforePickingUp = 2;
-	[SerializeField] SimpleMouseRotator[] allMouseRotationScripts;
 	[SerializeField] GUIText pickupText;
+	SimpleMouseRotator[] allMouseRotationScripts;
+	FirstPersonHeadBob[] allHeadBobScripts;
 
 	bool isHeadAttached = true;
 	bool isFireButtonDown = false;
@@ -21,9 +22,20 @@ public class ThrowHead : MonoBehaviour
 		}
 	}
 
+	public Transform HeadTransform
+	{
+		get
+		{
+			return temporarilyAttachedCamera.transform;
+		}
+	}
+
 	void Start()
 	{
 		pickupText.enabled = false;
+		allMouseRotationScripts = GetComponentsInChildren<SimpleMouseRotator>();
+		allHeadBobScripts = GetComponentsInChildren<FirstPersonHeadBob>();
+		Screen.lockCursor = true;
 	}
 
 	// Update is called once per frame
@@ -58,6 +70,10 @@ public class ThrowHead : MonoBehaviour
 				{
 					rotator.enabled = false;
 				}
+				foreach(FirstPersonHeadBob headBob in allHeadBobScripts)
+				{
+					headBob.enabled = false;
+				}
 				isHeadAttached = false;
 			}
 		}
@@ -72,7 +88,11 @@ public class ThrowHead : MonoBehaviour
 				temporarilyAttachedCamera.transform.localRotation = Quaternion.identity;
 				foreach(SimpleMouseRotator rotator in allMouseRotationScripts)
 				{
-					rotator.enabled = false;
+					rotator.enabled = true;
+				}
+				foreach(FirstPersonHeadBob headBob in allHeadBobScripts)
+				{
+					headBob.enabled = true;
 				}
 				pickupText.enabled = false;
 				isHeadAttached = true;
