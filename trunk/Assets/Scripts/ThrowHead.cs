@@ -93,7 +93,7 @@ public class ThrowHead : MonoBehaviour
 				}
 				foreach(FirstPersonHeadBob headBob in allHeadBobScripts)
 				{
-					headBob.enabled = false;
+					//headBob.enabled = false;
 				}
 				headHopper.TossHead();
 				isHeadAttached = false;
@@ -115,7 +115,7 @@ public class ThrowHead : MonoBehaviour
 				}
 				foreach(FirstPersonHeadBob headBob in allHeadBobScripts)
 				{
-					headBob.enabled = true;
+					//headBob.enabled = true;
 				}
 				isHeadAttached = true;
 				PauseMenu.HideMessage();
