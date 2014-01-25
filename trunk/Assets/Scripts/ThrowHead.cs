@@ -5,6 +5,7 @@ public class ThrowHead : MonoBehaviour
 {
 	[SerializeField] GameObject permanentlyAttachedCamera;
 	[SerializeField] SimpleMouseRotator temporarilyAttachedCamera;
+	[SerializeField] HopHead headHopper;
 	[SerializeField] float throwForce = 30;
 	[SerializeField] float distanceFromBodyBeforePickingUp = 2;
 	[SerializeField] GUIText pickupText;
@@ -105,6 +106,10 @@ public class ThrowHead : MonoBehaviour
 		else
 		{
 			pickupText.enabled = false;
+			if(fireButtonPressed == true)
+			{
+				headHopper.Jump();
+			}
 		}
 	}
 }

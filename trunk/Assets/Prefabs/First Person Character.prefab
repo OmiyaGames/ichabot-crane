@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 33: {fileID: 3300002}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400022}
   m_Layer: 12
   m_Name: HeadBall
   m_TagString: Player1
@@ -403,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   permanentlyAttachedCamera: {fileID: 100004}
   temporarilyAttachedCamera: {fileID: 11400012}
+  headHopper: {fileID: 11400022}
   throwForce: 35
   distanceFromBodyBeforePickingUp: 3
   pickupText: {fileID: 0}
@@ -613,6 +615,19 @@ MonoBehaviour:
   blurIterations: 1
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f074d928e757dd74dafe74656a8166fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upForce: 5
+  forwardForce: 2
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
