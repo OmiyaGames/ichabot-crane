@@ -1696,9 +1696,9 @@ Animator:
   m_GameObject: {fileID: 100110}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 320b1c2af77554f99a1658df4a6d3d5c, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
-  m_ApplyRootMotion: 1
+  m_Controller: {fileID: 9100000, guid: 9b9d05f31950c32468e1064c705c9d30, type: 2}
+  m_CullingMode: 0
+  m_ApplyRootMotion: 0
   m_AnimatePhysics: 0
   m_HasTransformHierarchy: 1
 --- !u!114 &11400000
@@ -1785,7 +1785,7 @@ MonoBehaviour:
       type: 2}
     highFrictionMaterial: {fileID: 13400000, guid: ae51c2b8a2d62f74a917726ce1c0af2c,
       type: 2}
-  characterAnimator: {fileID: 0}
+  characterAnimator: {fileID: 9500000}
 --- !u!114 &11400008
 MonoBehaviour:
   m_ObjectHideFlags: 1
