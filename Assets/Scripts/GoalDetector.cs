@@ -1,12 +1,20 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(ThrowHead))]
 public class GoalDetector : MonoBehaviour
 {
+	ThrowHead headStatus;
+
+	void Start()
+	{
+		headStatus = GetComponent<ThrowHead>();
+	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		SceneTransition transition = Singleton.Get<SceneTransition>();
-		if((enabled == true) && (other != null) && (transition.State == SceneTransition.Transition.NotTransitioning))
+		if((enabled == true) && (other != null) && (headStatus.IsHeadAttached == true) && (transition.State == SceneTransition.Transition.NotTransitioning))
 		{
 			if(other.CompareTag("Goal") == true)
 			{

@@ -100,11 +100,11 @@ public class Goal : MonoBehaviour
 			mTargetColor = TargetColor;
 			
 			// Update current color
-			mCurrentColor = Color.Lerp(mCurrentColor, mTargetColor, (Time.deltaTime * Collectable.ColorChangeSpeed));
+			mCurrentColor = Color.Lerp(mCurrentColor, mTargetColor, (Time.deltaTime * 1));
 			float rDiff = mCurrentColor.r - mTargetColor.r;
 			float bDiff = mCurrentColor.b - mTargetColor.b;
 			float gDiff = mCurrentColor.g - mTargetColor.g;
-			if(((rDiff * rDiff) + (bDiff * bDiff) + (gDiff * gDiff)) < Collectable.ColorDifferenceSnap)
+			if(((rDiff * rDiff) + (bDiff * bDiff) + (gDiff * gDiff)) < 0.1f)
 			{
 				mCurrentColor = mTargetColor;
 				mChangeColor = false;
