@@ -8,7 +8,6 @@ public class ThrowHead : MonoBehaviour
 	[SerializeField] HopHead headHopper;
 	[SerializeField] float throwForce = 30;
 	[SerializeField] float distanceFromBodyBeforePickingUp = 2;
-	[SerializeField] GUIText pickupText;
 	SimpleMouseRotator[] allMouseRotationScripts;
 	FirstPersonHeadBob[] allHeadBobScripts;
 
@@ -46,7 +45,6 @@ public class ThrowHead : MonoBehaviour
 
 	void Start()
 	{
-		pickupText.enabled = false;
 		allMouseRotationScripts = GetComponentsInChildren<SimpleMouseRotator>();
 		allHeadBobScripts = GetComponentsInChildren<FirstPersonHeadBob>();
 		isPaused = false;
@@ -101,6 +99,7 @@ public class ThrowHead : MonoBehaviour
 		}
 		else if(Vector3.Distance(permanentlyAttachedCamera.transform.position, temporarilyAttachedCamera.transform.position) < distanceFromBodyBeforePickingUp)
 		{
+			PauseMenu.ShowMessage("Click to pick up head");
 			if(fireButtonPressed == true)
 			{
 				permanentlyAttachedCamera.SetActive(true);
@@ -116,17 +115,13 @@ public class ThrowHead : MonoBehaviour
 				{
 					headBob.enabled = true;
 				}
-				pickupText.enabled = false;
 				isHeadAttached = true;
-			}
-			else
-			{
-				pickupText.enabled = true;
+				PauseMenu.HideMessage();
 			}
 		}
 		else
 		{
-			pickupText.enabled = false;
+			PauseMenu.HideMessage();
 			if(fireButtonPressed == true)
 			{
 				headHopper.Jump();
