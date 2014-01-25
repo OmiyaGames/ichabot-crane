@@ -84,6 +84,8 @@ public class FirstPersonCharacter : MonoBehaviour
 					// The character is grounded, and we store the ground angle (calculated from the normal)
 					grounded = true;
 					nearest = hits[i].distance;
+					characterAnimator.ResetTrigger("jump");
+					characterAnimator.SetTrigger("land");
 					//Debug.DrawRay(transform.position, groundAngle * transform.forward, Color.green);
 				}
 			}
@@ -112,6 +114,7 @@ public class FirstPersonCharacter : MonoBehaviour
 				transform.rotation = Quaternion.LookRotation(desiredMove.normalized);
 			}
 		}
+		characterAnimator.SetFloat("speed", desiredMove.sqrMagnitude);
 
 		// preserving current y velocity (for falling, gravity)
 		float yv = rigidbody.velocity.y;
@@ -120,6 +123,8 @@ public class FirstPersonCharacter : MonoBehaviour
 		if (grounded && jump) {
 			yv += jumpPower;
 			grounded = false;
+			characterAnimator.ResetTrigger("land");
+			characterAnimator.SetTrigger("jump");
 		}
 
 		// Set the rigidbody's velocity according to the ground angle and desired move
