@@ -42,7 +42,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 896b6ff456a005842967631631a8ea42, type: 2}
+  - {fileID: 2100000, guid: c04c048f4c5061342bf360a937fd9017, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -83,6 +83,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerOnBody: 1
   triggerOnHead: 1
+  moveDownBy: .469999999
+  smoothFactor: 5
+  colorAdjustment: {fileID: 2300000}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

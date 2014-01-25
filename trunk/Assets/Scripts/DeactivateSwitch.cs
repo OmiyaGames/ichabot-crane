@@ -19,6 +19,6 @@ public class DeactivateSwitch : MonoBehaviour
 	IEnumerator DelayDeactivate()
 	{
 		yield return null;
-		switchToDeactivate.enabled = false;
+		switchToDeactivate.IsTriggerEnabled = false;
 	}
 }

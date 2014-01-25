@@ -420,7 +420,7 @@ GUIText:
   m_GameObject: {fileID: 513769688}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Taro Omiya
+  m_Text: Taro Omiya, Adam Mendelevitz
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -539,8 +539,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 455344002}
-  - {fileID: 1336415785}
   - {fileID: 766493357}
+  - {fileID: 1336415785}
   - {fileID: 1370547812}
   - {fileID: 1221262999}
   - {fileID: 513769689}
@@ -1108,7 +1108,7 @@ GameObject:
   - 4: {fileID: 1370547812}
   - 132: {fileID: 1370547813}
   m_Layer: 0
-  m_Name: Adam Mendelevitz
+  m_Name: Jackson Dzus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,7 +1134,7 @@ GUIText:
   m_GameObject: {fileID: 1370547811}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Adam Mendelevitz
+  m_Text: Jackson Dzus
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
