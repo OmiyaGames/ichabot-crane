@@ -403,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   permanentlyAttachedCamera: {fileID: 100004}
   temporarilyAttachedCamera: {fileID: 11400012}
-  throwForce: 20
+  throwForce: 35
   distanceFromBodyBeforePickingUp: 3
   pickupText: {fileID: 0}
 --- !u!114 &11400002
@@ -463,13 +463,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0df9a9d86fd853489f8817ca5901293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 10
-  strafeSpeed: 6
-  jumpPower: 7
+  runSpeed: 12
+  strafeSpeed: 8
+  jumpPower: 15
   walkByDefault: 0
-  walkSpeed: 10
+  walkSpeed: 12
   advanced:
-    gravityMultiplier: 1
+    gravityMultiplier: 1.25
     zeroFrictionMaterial: {fileID: 13400000, guid: cf63880488ec29f43a759ecd9c6c5123,
       type: 2}
     highFrictionMaterial: {fileID: 13400000, guid: ae51c2b8a2d62f74a917726ce1c0af2c,
