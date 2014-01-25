@@ -5,6 +5,8 @@ using System.Collections;
 public class HopHead : MonoBehaviour {
 	public float upForce = 10;
 	public float forwardForce = 10;
+	public MotionBlur cameraEffect1;
+	public NoiseAndGrain cameraEffect2;
 	private const float jumpRayLength = 1.5f; 
 	public bool grounded { get; private set; }
 	private SphereCollider headCollider;
@@ -13,7 +15,13 @@ public class HopHead : MonoBehaviour {
 	void Start () {
 		// Set up a reference to the capsule collider.
 		headCollider = collider as SphereCollider;
-		grounded = true;
+		grounded = false;
+	}
+
+	public void TossHead()
+	{
+		cameraEffect1.enabled = true;
+		cameraEffect2.enabled = true;
 	}
 
 	public void Jump()
@@ -24,6 +32,12 @@ public class HopHead : MonoBehaviour {
 			rigidbody.AddForce(transform.up * upForce + transform.forward * forwardForce, ForceMode.VelocityChange);
 			grounded = false;
 		}
+	}
+
+	void OnCollisionEnter()
+	{
+		cameraEffect1.enabled = false;
+		cameraEffect2.enabled = false;
 	}
 	
 	// Update is called once per frame
