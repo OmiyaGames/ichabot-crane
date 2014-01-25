@@ -2,12 +2,15 @@
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public class DoorOpener : MonoBehaviour
 {
 	public float moveUpBy = 5;
 	public Switch activateSwitch;
 	public bool holdToOpen = false;
 	public float smoothFactor = 1;
+	public AudioClip openSound;
+	public AudioClip closeSound;
 
 	bool isOpen = false;
 	Vector3 originalPosition;
@@ -27,6 +30,7 @@ public class DoorOpener : MonoBehaviour
 	void SwitchEnter(bool isHead)
 	{
 		isOpen = true;
+		audio.PlayOneShot(openSound);
 	}
 
 	void SwitchExit(bool isHead)
@@ -34,6 +38,7 @@ public class DoorOpener : MonoBehaviour
 		if(holdToOpen == true)
 		{
 			isOpen = false;
+			audio.PlayOneShot(closeSound);
 		}
 	}
 	
