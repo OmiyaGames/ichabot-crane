@@ -51,9 +51,9 @@ public class RollHead : MonoBehaviour {
 		#endif
 		
 		// smoothly interpolate current values to target angles
-		//followAngles = Vector3.SmoothDamp( followAngles, targetAngles, ref followVelocity, dampingTime );
+		followAngles = Vector3.SmoothDamp( followAngles, targetAngles, ref followVelocity, dampingTime );
 		
 		// update the actual gameobject's rotation
-		rigidbody.AddRelativeTorque(targetAngles, ForceMode.VelocityChange);
+		rigidbody.AddRelativeTorque(followAngles, ForceMode.Force);
 	}
 }
