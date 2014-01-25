@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(ThrowHead))]
 public class FirstPersonCharacter : MonoBehaviour
 {
 	[SerializeField] private float runSpeed = 8f;                                       // The speed at which we want the character to move
@@ -23,6 +24,7 @@ public class FirstPersonCharacter : MonoBehaviour
     private const float jumpRayLength = 0.7f;                                           // The length of the ray used for testing against the ground when jumping
 	public bool grounded { get; private set; }
 	private Vector2 input;
+	ThrowHead headThrowController;
 
     void Awake ()
 	{
