@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Rigidbody))]
 public class DoorOpener : MonoBehaviour
 {
 	public float moveUpBy = 5;
@@ -45,6 +46,6 @@ public class DoorOpener : MonoBehaviour
 			targetPosition = openPosition;
 		}
 
-		transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, Time.deltaTime * smoothFactor);
+		rigidbody.MovePosition(Vector3.SmoothDamp(rigidbody.position, targetPosition, ref velocity, Time.deltaTime * smoothFactor));
 	}
 }
