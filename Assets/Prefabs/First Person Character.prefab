@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 400000}
   - 54: {fileID: 5400000}
   - 135: {fileID: 13500000}
-  - 114: {fileID: 11400010}
   - 23: {fileID: 2300002}
   - 33: {fileID: 3300002}
+  - 114: {fileID: 11400012}
   m_Layer: 12
   m_Name: HeadBall
   m_TagString: Player1
@@ -32,6 +32,7 @@ GameObject:
   - 92: {fileID: 9200000}
   - 124: {fileID: 12400000}
   - 81: {fileID: 8100000}
+  - 114: {fileID: 11400010}
   m_Layer: 12
   m_Name: First Person Camera
   m_TagString: MainCamera
@@ -279,11 +280,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 1
-  m_AngularDrag: 1
+  m_AngularDrag: 5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!54 &5400002
 Rigidbody:
@@ -340,8 +341,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   permanentlyAttachedCamera: {fileID: 100004}
-  temporarilyAttachedCamera: {fileID: 5400000}
-  throwForce: 20
+  temporarilyAttachedCamera: {fileID: 11400012}
+  throwForce: 5
   distanceFromBodyBeforePickingUp: 3
   allMouseRotationScripts: []
   pickupText: {fileID: 0}
@@ -433,16 +434,35 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationRange: {x: 170, y: 0}
+  rotationSpeed: 5
+  dampingTime: .100000001
+  autoZeroVerticalOnMobile: 1
+  autoZeroHorizontalOnMobile: 0
+  relative: 1
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f074d928e757dd74dafe74656a8166fb, type: 3}
+  m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 2
-  dampingTime: .200000003
+  rotationRange: {x: 0, y: 999}
+  rotationSpeed: 5
+  dampingTime: .00999999978
   autoZeroVerticalOnMobile: 1
   autoZeroHorizontalOnMobile: 0
+  relative: 1
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1

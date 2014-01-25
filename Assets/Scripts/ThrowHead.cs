@@ -4,7 +4,7 @@ using System.Collections;
 public class ThrowHead : MonoBehaviour
 {
 	[SerializeField] GameObject permanentlyAttachedCamera;
-	[SerializeField] Rigidbody temporarilyAttachedCamera;
+	[SerializeField] SimpleMouseRotator temporarilyAttachedCamera;
 	[SerializeField] float throwForce = 30;
 	[SerializeField] float distanceFromBodyBeforePickingUp = 2;
 	[SerializeField] SimpleMouseRotator[] allMouseRotationScripts;
@@ -52,7 +52,8 @@ public class ThrowHead : MonoBehaviour
 				permanentlyAttachedCamera.SetActive(false);
 				temporarilyAttachedCamera.gameObject.SetActive(true);
 				temporarilyAttachedCamera.transform.parent = null;
-				temporarilyAttachedCamera.AddForce(permanentlyAttachedCamera.transform.forward * throwForce, ForceMode.VelocityChange);
+				temporarilyAttachedCamera.rigidbody.AddForce(permanentlyAttachedCamera.transform.forward * throwForce, ForceMode.VelocityChange);
+				temporarilyAttachedCamera.Start();
 				foreach(SimpleMouseRotator rotator in allMouseRotationScripts)
 				{
 					rotator.enabled = false;

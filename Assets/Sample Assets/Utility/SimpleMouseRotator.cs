@@ -28,8 +28,10 @@ public class SimpleMouseRotator : MonoBehaviour {
 
 	
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		originalRotation = transform.localRotation;
+		targetAngles = Vector3.zero;
+		followAngles = Vector3.zero;
 	}
 	
 	// Update is called once per frame
