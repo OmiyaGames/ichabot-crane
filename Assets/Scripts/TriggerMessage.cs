@@ -15,7 +15,7 @@ public class TriggerMessage : MonoBehaviour
 	
 	public void OnTriggerEnter(Collider other)
 	{
-		if((mIsTriggered == false) && (other.CompareTag("Player") == true))
+		if((mIsTriggered == false) && ((other.CompareTag("Player") == true) || (other.CompareTag("Player1") == true)))
 		{
 			PauseMenu.ShowMessage(message);
 			mIsTriggered = true;

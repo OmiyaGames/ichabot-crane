@@ -10,6 +10,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
   - enabled: 1
+    path: Assets/Scenes/TutorialJumping.unity
+  - enabled: 1
+    path: Assets/Scenes/TutorialSwitch.unity
+  - enabled: 0
     path: Assets/Scenes/Debug.unity
   - enabled: 1
     path: Assets/Scenes/AM_debug.unity
