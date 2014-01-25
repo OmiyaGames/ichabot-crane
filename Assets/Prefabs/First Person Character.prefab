@@ -342,7 +342,8 @@ MonoBehaviour:
   permanentlyAttachedCamera: {fileID: 100004}
   temporarilyAttachedCamera: {fileID: 5400000}
   throwForce: 20
-  distanceFromBodyBeforePickingUp: 2
+  distanceFromBodyBeforePickingUp: 3
+  allMouseRotationScripts: []
   pickupText: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -438,6 +439,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f074d928e757dd74dafe74656a8166fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 2
+  dampingTime: .200000003
+  autoZeroVerticalOnMobile: 1
+  autoZeroHorizontalOnMobile: 0
 --- !u!124 &12400000
 Behaviour:
   m_ObjectHideFlags: 1
