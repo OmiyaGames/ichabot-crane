@@ -1,10 +1,6 @@
 using UnityEngine;
 
 public class ActivateTrigger : MonoBehaviour {
-
-	// A multi-purpose script which causes an action to occur when
-	// a trigger collider is entered.
-
 	public enum Mode {
 		Trigger   = 0, // Just broadcast the action on to the target
 		Replace   = 1, // replace target with source
@@ -44,7 +40,7 @@ public class ActivateTrigger : MonoBehaviour {
 					}
 					break;
 				case Mode.Activate:
-					targetGameObject.SetActive(true);
+					targetGameObject.active = true;
 					break;
 				case Mode.Enable:
 					if (targetBehaviour != null)
@@ -54,7 +50,7 @@ public class ActivateTrigger : MonoBehaviour {
 					targetGameObject.animation.Play ();
 					break;	
 				case Mode.Deactivate:
-					targetGameObject.SetActive(false);
+					targetGameObject.active = false;
 					break;
 			}
 		}
