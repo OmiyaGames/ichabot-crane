@@ -29,7 +29,13 @@ public class SimpleMouseRotator : MonoBehaviour {
 	
 	// Use this for initialization
 	public void Start () {
+		//originalRotation = Quaternion.identity;
+		//targetAngles = Vector3.zero;
+		//followAngles = Vector3.zero;
 		originalRotation = transform.localRotation;
+		targetAngles = originalRotation.eulerAngles;
+		targetAngles.x = 0;
+		originalRotation = Quaternion.Euler(targetAngles);
 		targetAngles = Vector3.zero;
 		followAngles = Vector3.zero;
 	}
