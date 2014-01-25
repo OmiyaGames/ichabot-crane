@@ -25,12 +25,14 @@ public class FirstPersonCharacter : MonoBehaviour
 	public bool grounded { get; private set; }
 	private Vector2 input;
 	ThrowHead headThrowController;
+	Vector3 desiredMove;
 
     void Awake ()
 	{
         // Set up a reference to the capsule collider.
 	    capsule = collider as CapsuleCollider;
 		grounded = true;
+		headThrowController = GetComponent<ThrowHead>();
 	}
 
 	
@@ -94,7 +96,23 @@ public class FirstPersonCharacter : MonoBehaviour
 		if (input.sqrMagnitude > 1) input.Normalize();
 
 		// Get a vector which is desired move as a world-relative direction, including speeds
-		Vector3 desiredMove = transform.forward * input.y * speed + transform.right * input.x * strafeSpeed;
+		desiredMove = Vector3.zero;
+		if(headThrowController.IsHeadAttached == true)
+		{
+			desiredMove = transform.forward * input.y * speed + transform.right * input.x * strafeSpeed;
+		}
+		else
+		{
+			desiredMove = headThrowController.HeadTransform.forward * input.y * speed + headThrowController.HeadTransform.right * input.x * speed;
+			if(desiredMove.sqrMagnitude > 0)
+			{
+				//Vector3 faceDirection = desiredMove.normalized;
+				//faceDirection.x = 0;
+				//faceDirection.y = 0;
+				Debug.Log("FirstPersonController Rotation");
+				transform.rotation = Quaternion.LookRotation(desiredMove.normalized);
+			}
+		}
 
 		// preserving current y velocity (for falling, gravity)
 		float yv = rigidbody.velocity.y;
@@ -120,4 +138,8 @@ public class FirstPersonCharacter : MonoBehaviour
         rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
 	}
 
+	void OnDrawGizmos()
+	{
+		Gizmos.DrawLine(transform.position, transform.position + desiredMove);
+	}
 }

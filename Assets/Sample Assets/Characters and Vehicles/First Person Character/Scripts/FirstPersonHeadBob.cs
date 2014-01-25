@@ -122,7 +122,11 @@ public class FirstPersonHeadBob : MonoBehaviour {
 		float xTilt = -springPos*jumpLandTilt;
 		float zTilt = bobSwayFactor*headBobSwayAngle*headBobFade;
 		head.localPosition = originalLocalPos + new Vector3(xPos, yPos, 0);
-		head.localRotation = Quaternion.Euler(xTilt,0,zTilt);
+		if(enabled == true)
+		{
+			head.localRotation = Quaternion.Euler(xTilt,0,zTilt);
+			Debug.Log("FirstPersonHeadBob Rotation");
+		}
 
 
 		// Play audio clips based on leaving ground/landing and head bob cycle
