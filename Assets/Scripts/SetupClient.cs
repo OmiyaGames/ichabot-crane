@@ -86,8 +86,8 @@ public class SetupClient : MonoBehaviour
 
 	void OnConnectedToServer()
 	{
-		GameObject clone = (GameObject)Network.Instantiate(prefab, Vector3.zero, Quaternion.identity, 1);
-		cube = clone.transform;
+		//GameObject clone = (GameObject)Network.Instantiate(prefab, Vector3.zero, Quaternion.identity, 1);
+		cube = prefab.transform;
 		currentState = State.Connected;
 		Network.SetSendingEnabled(0, true);
 	}
