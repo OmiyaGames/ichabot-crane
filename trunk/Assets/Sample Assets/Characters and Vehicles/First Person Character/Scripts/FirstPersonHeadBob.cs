@@ -125,7 +125,7 @@ public class FirstPersonHeadBob : MonoBehaviour {
 		if(enabled == true)
 		{
 			head.localRotation = Quaternion.Euler(xTilt,0,zTilt);
-			Debug.Log("FirstPersonHeadBob Rotation");
+			//Debug.Log("FirstPersonHeadBob Rotation");
 		}
 
 

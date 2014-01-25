@@ -88,7 +88,7 @@ public class FirstPersonCharacter : MonoBehaviour
 			}
 		}
 
-		Debug.DrawRay(ray.origin, ray.direction * capsule.height * jumpRayLength, grounded ? Color.green : Color.red );
+		//Debug.DrawRay(ray.origin, ray.direction * capsule.height * jumpRayLength, grounded ? Color.green : Color.red );
 		
 
             
@@ -106,10 +106,8 @@ public class FirstPersonCharacter : MonoBehaviour
 			desiredMove = headThrowController.HeadTransform.forward * input.y * speed + headThrowController.HeadTransform.right * input.x * speed;
 			if(desiredMove.sqrMagnitude > 0)
 			{
-				//Vector3 faceDirection = desiredMove.normalized;
-				//faceDirection.x = 0;
-				//faceDirection.y = 0;
-				Debug.Log("FirstPersonController Rotation");
+				//Debug.Log("FirstPersonController Rotation");
+				Debug.DrawLine(transform.position, transform.position + desiredMove);
 				transform.rotation = Quaternion.LookRotation(desiredMove.normalized);
 			}
 		}
@@ -136,10 +134,5 @@ public class FirstPersonCharacter : MonoBehaviour
 
 		// add extra gravity
         rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
-	}
-
-	void OnDrawGizmos()
-	{
-		Gizmos.DrawLine(transform.position, transform.position + desiredMove);
 	}
 }

@@ -146,7 +146,7 @@ public class SimpleMouseRotator : MonoBehaviour {
 
 			// update the actual gameobject's rotation
 			transform.localRotation = originalRotation * Quaternion.Euler( -followAngles.x, followAngles.y, 0 );
-			Debug.Log(gameObject.name + " Rotation");
+			//Debug.Log(gameObject.name + " Rotation");
 		}
 	}
 }
