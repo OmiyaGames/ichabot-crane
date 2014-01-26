@@ -8,6 +8,7 @@ public class HopHead : MonoBehaviour {
 	public float forwardForce = 10;
 	public MotionBlur cameraEffect1;
 	public NoiseAndGrain cameraEffect2;
+	public SimpleMouseRotator cameraControl;
 	private const float jumpRayLength = 1.5f; 
 	public bool grounded { get; private set; }
 	private SphereCollider headCollider;
@@ -23,6 +24,13 @@ public class HopHead : MonoBehaviour {
 	{
 		cameraEffect1.enabled = true;
 		cameraEffect2.enabled = true;
+		cameraControl.enabled = true;
+		//cameraControl.Start();
+	}
+
+	public void ReattachHead()
+	{
+		cameraControl.enabled = false;
 	}
 
 	public void Jump()

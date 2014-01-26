@@ -101,7 +101,7 @@ Light:
     m_Type: 2
     m_Resolution: 2
     m_Strength: .600000024
-    m_Bias: .00999999978
+    m_Bias: 0
     m_Softness: 1.75
     m_SoftnessFade: .75
   m_Cookie: {fileID: 0}
@@ -124,7 +124,7 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: .708477497, g: .799725533, b: .823529422, a: 1}
@@ -143,7 +143,7 @@ Light:
   m_DrawHalo: 0
   m_ActuallyLightmapped: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967294

@@ -24,6 +24,7 @@ public class FirstPersonCharacter : MonoBehaviour
     private CapsuleCollider capsule;                                                    // The capsule collider for the first person character
     private const float jumpRayLength = 0.7f;                                           // The length of the ray used for testing against the ground when jumping
 	public bool grounded { get; private set; }
+	public bool isControlsEnabled { get; set; }
 	private Vector2 input;
 	ThrowHead headThrowController;
 	Vector3 desiredMove;
@@ -33,6 +34,7 @@ public class FirstPersonCharacter : MonoBehaviour
         // Set up a reference to the capsule collider.
 	    capsule = collider as CapsuleCollider;
 		grounded = true;
+		isControlsEnabled = true;
 		headThrowController = GetComponent<ThrowHead>();
 	}
 
@@ -40,10 +42,15 @@ public class FirstPersonCharacter : MonoBehaviour
 	public void FixedUpdate ()
 	{
         // Read input
-		float h = CrossPlatformInput.GetAxis("Horizontal");
-		float v = CrossPlatformInput.GetAxis("Vertical");
-		bool jump = CrossPlatformInput.GetButton("Jump");
-
+		float h = 0;
+		float v = 0;
+		bool jump = false;
+		if(isControlsEnabled == true)
+		{
+			h = CrossPlatformInput.GetAxis("Horizontal");
+			v = CrossPlatformInput.GetAxis("Vertical");
+			jump = CrossPlatformInput.GetButton("Jump");
+		}
 		input = new Vector2( h, v );
 
 		float speed = runSpeed;
