@@ -297,7 +297,7 @@ GUIText:
   m_GameObject: {fileID: 51636532}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Jackson Dzus, Brigitta Blair
+  m_Text: Jackson Dzus, Brigitta Blair, Josh Jennings
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 2, y: -2}
@@ -2175,7 +2175,7 @@ GUIText:
   m_GameObject: {fileID: 1370547811}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Jackson Dzus, Brigitta Blair
+  m_Text: Jackson Dzus, Brigitta Blair, Josh Jennings
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -2589,7 +2589,18 @@ MonoBehaviour:
   smallButtonEndPosition: 1
   smallButtonWidth: .200000003
   titleGuiText:
+  - {fileID: 26524128}
+  - {fileID: 1221263000}
+  - {fileID: 766493358}
+  - {fileID: 1566089730}
+  - {fileID: 51636534}
+  - {fileID: 1370547813}
+  - {fileID: 1336415786}
+  - {fileID: 397832646}
+  - {fileID: 513769690}
+  - {fileID: 2146413903}
   - {fileID: 1356738919}
+  - {fileID: 582976844}
   skin: {fileID: 11400000, guid: cecb4ab2e149fcf40b39716aea5acc12, type: 2}
 --- !u!114 &1672979704
 MonoBehaviour:
