@@ -511,7 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68adc01ee3b65b45beeca52526da8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpBy: -8
+  moveUpBy: -4.19999981
   activateSwitch: {fileID: 1251231988}
   holdToOpen: 0
   smoothFactor: 10
@@ -1827,6 +1827,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .0706795827
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: f0f66966c2bb6804bb99de3a4135b796, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0f66966c2bb6804bb99de3a4135b796, type: 2}
   m_RootGameObject: {fileID: 1251231987}
@@ -2705,7 +2709,7 @@ Prefab:
       objectReference: {fileID: 1251231988}
     - target: {fileID: 11400000, guid: d117ba9ac0abb69439843742af5c0aff, type: 2}
       propertyPath: moveUpBy
-      value: -8
+      value: -4.19999981
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d117ba9ac0abb69439843742af5c0aff, type: 2}
@@ -5070,7 +5074,7 @@ Prefab:
       objectReference: {fileID: 1251231988}
     - target: {fileID: 11400000, guid: d117ba9ac0abb69439843742af5c0aff, type: 2}
       propertyPath: moveUpBy
-      value: -8
+      value: -4.19999981
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d117ba9ac0abb69439843742af5c0aff, type: 2}
@@ -7178,7 +7182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68adc01ee3b65b45beeca52526da8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveUpBy: -8
+  moveUpBy: -4.19999981
   activateSwitch: {fileID: 1251231988}
   holdToOpen: 0
   smoothFactor: 10
