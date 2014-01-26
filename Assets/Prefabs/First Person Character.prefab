@@ -2099,7 +2099,7 @@ MonoBehaviour:
   popUpSettings:
     appearLength: 3
     appearSpeed: 5
-    popUpWidth: 500
+    popUpWidth: 600
     popUpHeight: 50
     popUpMargin: 20
   skin: {fileID: 11400000, guid: cecb4ab2e149fcf40b39716aea5acc12, type: 2}
@@ -2156,7 +2156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualizeFocus: 0
   focalLength: 0
-  focalSize: 1.5
+  focalSize: 1
   aperture: 11.5
   focalTransform: {fileID: 0}
   maxBlurSize: 2
@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualizeFocus: 0
   focalLength: 0
-  focalSize: 1.5
+  focalSize: 1
   aperture: 11.5
   focalTransform: {fileID: 0}
   maxBlurSize: 2
