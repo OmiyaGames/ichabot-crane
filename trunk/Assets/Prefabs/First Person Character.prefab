@@ -1743,7 +1743,7 @@ AudioSource:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 4e719a72b4aec1d40bb6fa711e8dd7ad, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 42f1673c28142c7429acabf43853d82a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1840,6 +1840,7 @@ MonoBehaviour:
   enableHeadTossing: 1
   headAttachementLerpFactor: 5
   headRotationLerpFactor: 5
+  throwHeadSound: {fileID: 8300000, guid: f8115fd1686cf744db78898f7a2277a0, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
