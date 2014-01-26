@@ -83,6 +83,7 @@ public class ThrowHead : MonoBehaviour
 				permanentlyAttachedCamera.SetActive(false);
 				temporarilyAttachedCamera.gameObject.SetActive(true);
 				temporarilyAttachedCamera.transform.parent = null;
+				temporarilyAttachedCamera.rigidbody.velocity = rigidbody.velocity;
 				temporarilyAttachedCamera.rigidbody.AddForce(permanentlyAttachedCamera.transform.forward * throwForce, ForceMode.VelocityChange);
 				temporarilyAttachedCamera.Start();
 				foreach(SimpleMouseRotator rotator in allMouseRotationScripts)
