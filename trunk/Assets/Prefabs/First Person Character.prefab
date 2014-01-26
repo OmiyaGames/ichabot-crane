@@ -37,9 +37,9 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400018}
   - 114: {fileID: 11400014}
+  - 114: {fileID: 11400032}
   - 114: {fileID: 11400030}
   - 114: {fileID: 11400028}
-  - 114: {fileID: 11400032}
   m_Layer: 12
   m_Name: Third Person Camera
   m_TagString: MainCamera
@@ -60,9 +60,9 @@ GameObject:
   - 124: {fileID: 12400002}
   - 81: {fileID: 8100002}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400034}
   - 114: {fileID: 11400020}
   - 114: {fileID: 11400016}
-  - 114: {fileID: 11400034}
   m_Layer: 12
   m_Name: First Person Camera
   m_TagString: MainCamera
@@ -2024,10 +2024,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshhold: .25
-  intensity: .75
-  blurSize: 1
-  resolution: 0
+  threshhold: .239999995
+  intensity: 1.12
+  blurSize: 1.23000002
+  resolution: 1
   blurIterations: 1
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
@@ -2042,10 +2042,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshhold: .25
-  intensity: .75
-  blurSize: 1
-  resolution: 0
+  threshhold: .239999995
+  intensity: 1.12
+  blurSize: 1.23000002
+  resolution: 1
   blurIterations: 1
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
