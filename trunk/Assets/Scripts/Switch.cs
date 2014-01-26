@@ -37,9 +37,11 @@ public class Switch : MonoBehaviour {
 	void Start()
 	{
 		collider.isTrigger = true;
-		originalPosition = transform.position;
-		pressedPosition = originalPosition;
-		pressedPosition += transform.forward * moveDownBy;
+		originalPosition = transform.localPosition;
+		pressedPosition = originalPosition + transform.forward * moveDownBy;
+		//pressedPosition = transform.position;
+		//pressedPosition += transform.forward * moveDownBy;
+		//pressedPosition = transform.InverseTransformPoint(pressedPosition);
 		originalColor = colorAdjustment.material.color;
 	}
 
@@ -92,7 +94,7 @@ public class Switch : MonoBehaviour {
 			targetColor = pressedColor;
 		}
 		
-		transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, Time.deltaTime * smoothFactor);
+		transform.localPosition = Vector3.SmoothDamp(transform.localPosition, targetPosition, ref velocity, Time.deltaTime * smoothFactor);
 		colorAdjustment.material.color = Color.Lerp(colorAdjustment.material.color, targetColor, Time.deltaTime * smoothFactor);
 	}
 }
