@@ -559,7 +559,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 397832644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .660000026, z: -1}
+  m_LocalPosition: {x: .5, y: .639999986, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -572,7 +572,7 @@ GUIText:
   m_GameObject: {fileID: 397832644}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Music "Sunken Suite" by:'
+  m_Text: 'Music "Sunken Suite" by: djpretzel'
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 2, y: -2}
@@ -656,57 +656,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f894ee0c5c76fee42a3cc4bde50cf089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &455344001
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 455344002}
-  - 132: {fileID: 455344003}
-  m_Layer: 0
-  m_Name: djpretzel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &455344002
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 455344001}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .620000005, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 967641453}
---- !u!132 &455344003
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13200000, guid: f93251f11ace0284b95f9422aadfc307,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 455344001}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: djpretzel
-  m_Anchor: 1
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
-  m_Material: {fileID: 0}
-  m_FontSize: 52
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
 --- !u!1 &460440525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,12 +1215,12 @@ GameObject:
   - 4: {fileID: 766493357}
   - 132: {fileID: 766493358}
   m_Layer: 0
-  m_Name: Jackson Dzus
+  m_Name: Font by
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &766493357
 Transform:
   m_ObjectHideFlags: 0
@@ -1279,7 +1228,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766493356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .699999988, z: 0}
+  m_LocalPosition: {x: .5, y: .680000007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -1292,7 +1241,7 @@ GUIText:
   m_GameObject: {fileID: 766493356}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Jackson Dzus
+  m_Text: 'Font "Bellota" by: Kemie Guaida and Gesine Todt'
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -1385,57 +1334,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1557838945}
---- !u!1 &953044295
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 953044297}
-  - 132: {fileID: 953044296}
-  m_Layer: 0
-  m_Name: djpretzel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!132 &953044296
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13200000, guid: f93251f11ace0284b95f9422aadfc307,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 953044295}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: djpretzel
-  m_Anchor: 1
-  m_Alignment: 0
-  m_PixelOffset: {x: 2, y: -2}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
-  m_Material: {fileID: 0}
-  m_FontSize: 52
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_PixelCorrect: 1
-  m_RichText: 1
---- !u!4 &953044297
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 953044295}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .620000005, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 967641453}
 --- !u!1 &967287232
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,8 +1386,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 26524127}
-  - {fileID: 455344002}
-  - {fileID: 953044297}
   - {fileID: 766493357}
   - {fileID: 1566089729}
   - {fileID: 51636533}
@@ -2164,7 +2060,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1336415784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .660000026, z: 0}
+  m_LocalPosition: {x: .5, y: .639999986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -2177,7 +2073,7 @@ GUIText:
   m_GameObject: {fileID: 1336415784}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: 'Music "Sunken Suite" by:'
+  m_Text: 'Music "Sunken Suite" by: djpretzel'
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -2558,12 +2454,12 @@ GameObject:
   - 4: {fileID: 1566089729}
   - 132: {fileID: 1566089730}
   m_Layer: 0
-  m_Name: Jackson Dzus
+  m_Name: Font by
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1566089729
 Transform:
   m_ObjectHideFlags: 0
@@ -2571,7 +2467,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566089728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .699999988, z: -1}
+  m_LocalPosition: {x: .5, y: .680000007, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -2584,10 +2480,10 @@ GUIText:
   m_GameObject: {fileID: 1566089728}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Jackson Dzus
+  m_Text: 'Font "Bellota" by: Kemie Guaida and Gesine Todt'
   m_Anchor: 1
   m_Alignment: 0
-  m_PixelOffset: {x: 4, y: -4}
+  m_PixelOffset: {x: 2, y: -2}
   m_LineSpacing: 1
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
@@ -2685,7 +2581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9b4c55ed2f1d5409f0719beddf673f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startButtonPosition: .5
+  startButtonPosition: .430000007
   endButtonPosition: .850000024
   buttonWidth: .5
   buttonMargin: .0199999996
