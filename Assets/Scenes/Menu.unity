@@ -1001,7 +1001,7 @@ GUIText:
   m_GameObject: {fileID: 582976842}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Headtosser
+  m_Text: Ichabot Crane
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 4, y: -4}
@@ -2124,7 +2124,7 @@ GUIText:
   m_GameObject: {fileID: 1356738917}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Headtosser
+  m_Text: Ichabot Crane
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
