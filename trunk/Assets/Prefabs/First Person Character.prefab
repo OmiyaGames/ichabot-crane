@@ -1873,8 +1873,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 400008}
   headBobFrequency: 1.5
-  headBobHeight: .300000012
-  headBobSwayAngle: .5
+  headBobHeight: .200000003
+  headBobSwayAngle: .100000001
   headBobSideMovement: .0500000007
   bobHeightSpeedMultiplier: .300000012
   bobStrideSpeedLengthen: .300000012
