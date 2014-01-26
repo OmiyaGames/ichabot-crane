@@ -2,6 +2,7 @@
 using System.Collections;
 
 [RequireComponent(typeof(FirstPersonCharacter))]
+[RequireComponent(typeof(AudioSource))]
 public class ThrowHead : MonoBehaviour
 {
 	public const float AnimationSnapFactor = 0.1f;
@@ -13,6 +14,7 @@ public class ThrowHead : MonoBehaviour
 	[SerializeField] bool enableHeadTossing = true;
 	[SerializeField] float headAttachementLerpFactor = 1;
 	[SerializeField] float headRotationLerpFactor = 1;
+	[SerializeField] AudioClip throwHeadSound;
 	SimpleMouseRotator[] allMouseRotationScripts;
 	FirstPersonCharacter controller;
 	bool isHeadAttached = true;
@@ -117,6 +119,7 @@ public class ThrowHead : MonoBehaviour
 				temporarilyAttachedCamera.rigidbody.velocity = rigidbody.velocity;
 				temporarilyAttachedCamera.rigidbody.AddForce(permanentlyAttachedCamera.transform.forward * throwForce, ForceMode.VelocityChange);
 				temporarilyAttachedCamera.Start();
+				audio.PlayOneShot(throwHeadSound);
 				foreach(SimpleMouseRotator rotator in allMouseRotationScripts)
 				{
 					rotator.enabled = false;

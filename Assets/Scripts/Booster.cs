@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(AudioSource))]
 public class Booster : MonoBehaviour
 {
 	public float bodyLaunchVelocity = 500;
@@ -16,10 +17,14 @@ public class Booster : MonoBehaviour
 		if(other.CompareTag("Player") == true)
 		{
 			playerBody = other.GetComponent<Rigidbody>();
+			audio.Stop();
+			audio.Play();
 		}
 		else if(other.CompareTag("Player1") == true)
 		{
 			playerHead = other.GetComponent<Rigidbody>();
+			audio.Stop();
+			audio.Play();
 		}
 	}
 
