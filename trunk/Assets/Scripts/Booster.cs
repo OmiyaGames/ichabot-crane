@@ -10,7 +10,6 @@ public class Booster : MonoBehaviour
 	public float headLaunchVelocity = 50;
 	Rigidbody playerBody = null;
 	Rigidbody playerHead = null;
-	int index = 0;
 
 	void OnTriggerEnter(Collider other)
 	{
