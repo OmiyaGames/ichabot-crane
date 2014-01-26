@@ -185,6 +185,7 @@ public class PauseMenu : MonoBehaviour
 			Time.timeScale = 1;
 			Screen.lockCursor = true;
 			ThrowHead.IsPaused = false;
+			AimReticle.Reticle.enabled = true;
 		}
 	}
 }

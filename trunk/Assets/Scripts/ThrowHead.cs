@@ -82,6 +82,7 @@ public class ThrowHead : MonoBehaviour
 			isPaused = true;
 			Time.timeScale = 0;
 			Screen.lockCursor = false;
+			AimReticle.Reticle.enabled = false;
 		}
 
 		// Check if head is attached
