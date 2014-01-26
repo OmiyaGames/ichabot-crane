@@ -477,7 +477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &766493357
 Transform:
   m_ObjectHideFlags: 0
@@ -1134,7 +1134,7 @@ GUIText:
   m_GameObject: {fileID: 1370547811}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Jackson Dzus
+  m_Text: Jackson Dzus, Brigitta Blair
   m_Anchor: 1
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
