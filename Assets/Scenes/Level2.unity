@@ -19,7 +19,7 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .178038508, g: .221482351, b: .272058845, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 5ba172cd3918d7c44aa6d04446119a00, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 931987be26c9646429c56f8a4692bb81, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -11589,20 +11589,8 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-      propertyPath: m_Shadows.m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 10800002, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
       propertyPath: m_RenderMode
@@ -42266,7 +42254,7 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: 2
-    m_Strength: 1
+    m_Strength: .75
     m_Bias: 0
     m_Softness: 1.75
     m_SoftnessFade: .75
