@@ -42,11 +42,11 @@ public class Booster : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		if(playerBody != null)
+		if((playerBody != null) && (playerBody.isKinematic == false))
 		{
 			playerBody.AddForce(transform.up * bodyLaunchVelocity);
 		}
-		if(playerHead != null)
+		if((playerHead != null) && (playerHead.isKinematic == false))
 		{
 			playerHead.velocity = transform.up * headLaunchVelocity;
 		}
