@@ -11,8 +11,8 @@ public class Switch : MonoBehaviour {
 	public Renderer colorAdjustment;
 	public AudioClip pressedSound;
 	public AudioClip upSound;
-	public event System.Action<bool> OnSwitchEnter;
-	public event System.Action<bool> OnSwitchExit;
+	public event System.Action<Collider> OnSwitchEnter;
+	public event System.Action<Collider> OnSwitchExit;
 
 	bool isPressed = false;
 	Vector3 originalPosition;
@@ -53,13 +53,13 @@ public class Switch : MonoBehaviour {
 			{
 				isPressed = true;
 				audio.PlayOneShot(pressedSound);
-				OnSwitchEnter(false);
+				OnSwitchEnter(other);
 			}
 			else if((other.CompareTag("Player1") == true) && (triggerOnHead == true))
 			{
 				isPressed = true;
 				audio.PlayOneShot(pressedSound);
-				OnSwitchEnter(true);
+				OnSwitchEnter(other);
 			}
 		}
 	}
@@ -72,13 +72,13 @@ public class Switch : MonoBehaviour {
 			{
 				isPressed = false;
 				audio.PlayOneShot(upSound);
-				OnSwitchExit(false);
+				OnSwitchExit(other);
 			}
 			else if((other.CompareTag("Player1") == true) && (triggerOnHead == true))
 			{
 				isPressed = false;
 				audio.PlayOneShot(upSound);
-				OnSwitchExit(true);
+				OnSwitchExit(other);
 			}
 		}
 	}

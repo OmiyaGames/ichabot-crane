@@ -11,7 +11,7 @@ public class DeactivateSwitch : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void OnSwitchEnter (bool isHead)
+	void OnSwitchEnter (Collider isHead)
 	{
 		StartCoroutine(DelayDeactivate());
 	}

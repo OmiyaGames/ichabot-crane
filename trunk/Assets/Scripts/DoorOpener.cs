@@ -27,13 +27,13 @@ public class DoorOpener : MonoBehaviour
 		openPosition += transform.up * moveUpBy;
 	}
 
-	void SwitchEnter(bool isHead)
+	void SwitchEnter(Collider isHead)
 	{
 		isOpen = true;
 		audio.PlayOneShot(openSound);
 	}
 
-	void SwitchExit(bool isHead)
+	void SwitchExit(Collider isHead)
 	{
 		if(holdToOpen == true)
 		{
