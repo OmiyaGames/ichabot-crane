@@ -1841,6 +1841,7 @@ MonoBehaviour:
   headAttachementLerpFactor: 5
   headRotationLerpFactor: 5
   throwHeadSound: {fileID: 8300000, guid: f8115fd1686cf744db78898f7a2277a0, type: 3}
+  pickupHeadSound: {fileID: 8300000, guid: 8d7ee14ad540e5d4693c997058bab95d, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1

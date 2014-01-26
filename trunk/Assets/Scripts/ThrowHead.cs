@@ -15,6 +15,7 @@ public class ThrowHead : MonoBehaviour
 	[SerializeField] float headAttachementLerpFactor = 1;
 	[SerializeField] float headRotationLerpFactor = 1;
 	[SerializeField] AudioClip throwHeadSound;
+	[SerializeField] AudioClip pickupHeadSound;
 	SimpleMouseRotator[] allMouseRotationScripts;
 	FirstPersonCharacter controller;
 	bool isHeadAttached = true;
@@ -140,6 +141,7 @@ public class ThrowHead : MonoBehaviour
 				headHopper.ReattachHead();
 				PauseMenu.HideMessage();
 				controller.isControlsEnabled = false;
+				audio.PlayOneShot(pickupHeadSound);
 			}
 		}
 		else
