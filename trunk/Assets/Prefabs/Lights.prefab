@@ -129,7 +129,7 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: 2
-    m_Strength: 1
+    m_Strength: .75
     m_Bias: 0
     m_Softness: 1.75
     m_SoftnessFade: .75

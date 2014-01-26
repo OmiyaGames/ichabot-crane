@@ -7789,20 +7789,8 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-      propertyPath: m_Shadows.m_Type
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-      propertyPath: m_Shadows.m_Bias
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 10800000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-      propertyPath: m_Shadows.m_Strength
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 10800002, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
       propertyPath: m_RenderMode
@@ -14616,9 +14604,9 @@ GameObject:
   - 124: {fileID: 821769596}
   - 81: {fileID: 821769595}
   - 114: {fileID: 821769599}
+  - 114: {fileID: 821769602}
   - 114: {fileID: 821769600}
   - 114: {fileID: 821769601}
-  - 114: {fileID: 821769602}
   m_Layer: 12
   m_Name: First Person Camera
   m_TagString: MainCamera
@@ -14724,10 +14712,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshhold: .25
-  intensity: .75
-  blurSize: 1
-  resolution: 0
+  threshhold: .239999995
+  intensity: 1.12
+  blurSize: 1.23000002
+  resolution: 1
   blurIterations: 1
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
@@ -21120,9 +21108,9 @@ GameObject:
   - 114: {fileID: 1151813118}
   - 114: {fileID: 1151813119}
   - 114: {fileID: 1151813120}
+  - 114: {fileID: 1151813123}
   - 114: {fileID: 1151813121}
   - 114: {fileID: 1151813122}
-  - 114: {fileID: 1151813123}
   m_Layer: 12
   m_Name: Third Person Camera
   m_TagString: MainCamera
@@ -21227,10 +21215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97b4768c3683045e4bfdb2e78272970c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshhold: .25
-  intensity: .75
-  blurSize: 1
-  resolution: 0
+  threshhold: .239999995
+  intensity: 1.12
+  blurSize: 1.23000002
+  resolution: 1
   blurIterations: 1
   blurType: 0
   fastBloomShader: {fileID: 4800000, guid: 68a00c837b82e4c6d92e7da765dc5f1d, type: 3}
@@ -27534,6 +27522,7 @@ MonoBehaviour:
   headAttachementLerpFactor: 5
   headRotationLerpFactor: 5
   throwHeadSound: {fileID: 8300000, guid: f8115fd1686cf744db78898f7a2277a0, type: 3}
+  pickupHeadSound: {fileID: 8300000, guid: 8d7ee14ad540e5d4693c997058bab95d, type: 3}
 --- !u!114 &1424628941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33365,7 +33354,7 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: 2
-    m_Strength: 1
+    m_Strength: .75
     m_Bias: 0
     m_Softness: 1.75
     m_SoftnessFade: .75
