@@ -23,9 +23,9 @@ public class GoalDetector : MonoBehaviour
 				{
 					// Figure out which level to switch to next
 					int nextLevel = (Application.loadedLevel + 1);
-					if(nextLevel > GameSettings.NumLevels)
+					if(nextLevel > (GameSettings.NumLevels + 1))
 					{
-						nextLevel = 0;
+						nextLevel = GameSettings.MenuLevel;
 					}
 					
 					// Check if this level is unlocked
