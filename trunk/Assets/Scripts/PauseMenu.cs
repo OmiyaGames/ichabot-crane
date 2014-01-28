@@ -51,11 +51,6 @@ public class PauseMenu : MonoBehaviour
 			mText = message;
 		}
 		
-		public void HideMessage()
-		{
-			mTimeFirstAppeared = -1f;
-		}
-
 		public void ShowLastMessage()
 		{
 			mTimeFirstAppeared = Time.time;
@@ -105,7 +100,7 @@ public class PauseMenu : MonoBehaviour
 	public GUISkin skin = null;
 
 	private Rect mTempRect = new Rect(0, 0, 0, 0);
-
+		
 	public static void ShowMessage(string message)
 	{
 		if((msInstance != null) && (msInstance.popUpSettings != null))
@@ -114,14 +109,6 @@ public class PauseMenu : MonoBehaviour
 		}
 	}
 	
-	public static void HideMessage()
-	{
-		if((msInstance != null) && (msInstance.popUpSettings != null))
-		{
-			msInstance.popUpSettings.HideMessage();
-		}
-	}
-
 	void Awake()
 	{
 		msInstance = this;
@@ -132,7 +119,7 @@ public class PauseMenu : MonoBehaviour
 		GUI.skin = skin;
 		SceneTransition transition = Singleton.Get<SceneTransition>();
 		popUpSettings.Display(ref mTempRect, Time.deltaTime, transition);
-		if((ThrowHead.IsPaused == true) && (transition.State == SceneTransition.Transition.NotTransitioning))
+		if((Fisher.Instance != null) && (Fisher.Instance.IsPaused == true) && (transition.State == SceneTransition.Transition.NotTransitioning))
 		{
 			DisplayPauseMenu(mTempRect, transition);
 		}
@@ -159,7 +146,7 @@ public class PauseMenu : MonoBehaviour
 		if(GUI.Button(buttonRect, "Return To Menu") == true)
 		{
 			Time.timeScale = 1;
-			transition.LoadLevel(0);
+			transition.LoadLevel(GameSettings.MenuLevel);
 		}
 		
 		// Add margin
@@ -182,10 +169,7 @@ public class PauseMenu : MonoBehaviour
 		buttonRect.y -= buttonRect.height;
 		if(GUI.Button(buttonRect, "Continue") == true)
 		{
-			Time.timeScale = 1;
-			Screen.lockCursor = true;
-			ThrowHead.IsPaused = false;
-			AimReticle.Reticle.enabled = true;
+			Fisher.Instance.IsPaused = false;
 		}
 	}
 }

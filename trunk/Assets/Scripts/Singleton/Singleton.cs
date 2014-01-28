@@ -12,14 +12,17 @@ public class Singleton : MonoBehaviour
 	{
 		COMPONENT returnObject = null;
 		Type retrieveType = typeof(COMPONENT);
-		if(msInstance.mCacheRetrievedComponent.ContainsKey(retrieveType) == true)
+		if (msInstance != null)
 		{
-			returnObject = msInstance.mCacheRetrievedComponent[retrieveType] as COMPONENT;
-		}
-		else
-		{
-			returnObject = msInstance.GetComponentInChildren<COMPONENT>();
-			msInstance.mCacheRetrievedComponent.Add(retrieveType, returnObject);
+			if (msInstance.mCacheRetrievedComponent.ContainsKey (retrieveType) == true)
+			{
+				returnObject = msInstance.mCacheRetrievedComponent [retrieveType] as COMPONENT;
+			}
+			else
+			{
+				returnObject = msInstance.GetComponentInChildren<COMPONENT> ();
+				msInstance.mCacheRetrievedComponent.Add (retrieveType, returnObject);
+			}
 		}
 		return returnObject;
 	}
