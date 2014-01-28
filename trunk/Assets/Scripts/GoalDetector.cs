@@ -30,10 +30,10 @@ public class GoalDetector : MonoBehaviour
 					
 					// Check if this level is unlocked
 					GameSettings settings = Singleton.Get<GameSettings>();
-					if(nextLevel > settings.NumLevelsUnlocked)
+					if((nextLevel - 1) > settings.NumLevelsUnlocked)
 					{
 						// If not, unlock it now!
-						settings.NumLevelsUnlocked = nextLevel;
+						settings.NumLevelsUnlocked = (nextLevel - 1);
 						settings.SaveSettings();
 					}
 					
