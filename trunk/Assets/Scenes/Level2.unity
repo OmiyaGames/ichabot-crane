@@ -27336,11 +27336,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e11ef4f39bc65e44a4b0755ecac6ea1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.89999998
+      value: 2.01171303
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e11ef4f39bc65e44a4b0755ecac6ea1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 47
+      value: 46.9032211
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4e11ef4f39bc65e44a4b0755ecac6ea1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -32385,6 +32385,7 @@ GameObject:
   - 4: {fileID: 1350708445}
   - 33: {fileID: 1350708447}
   - 23: {fileID: 1350708446}
+  - 64: {fileID: 1350708448}
   m_Layer: 0
   m_Name: Ramp 4x2x2
   m_TagString: Untagged
@@ -32399,7 +32400,7 @@ Transform:
   m_PrefabInternal: {fileID: 1114029728}
   m_GameObject: {fileID: 1350708444}
   m_LocalRotation: {x: .104528464, y: 0, z: 0, w: .994521916}
-  m_LocalPosition: {x: -31, y: 1.89999998, z: 47}
+  m_LocalPosition: {x: -31, y: 2.01171303, z: 46.9032211}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2116332666}
@@ -32432,6 +32433,19 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 1114029728}
   m_GameObject: {fileID: 1350708444}
+  m_Mesh: {fileID: 4300000, guid: b9d7ac1a0f551404f8d32e1e02b64325, type: 3}
+--- !u!64 &1350708448
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350708444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: b9d7ac1a0f551404f8d32e1e02b64325, type: 3}
 --- !u!1 &1352433805
 GameObject:
