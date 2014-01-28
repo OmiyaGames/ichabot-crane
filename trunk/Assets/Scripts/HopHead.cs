@@ -8,6 +8,7 @@ public class HopHead : MonoBehaviour {
 	public float forwardForce = 10;
 	public MotionBlur cameraEffect1;
 	public NoiseAndGrain cameraEffect2;
+	public SimpleMouseRotator cameraControlHorizontal;
 	public SimpleMouseRotator cameraControl;
 	private const float jumpRayLength = 1.5f; 
 	public bool grounded { get; private set; }
@@ -20,12 +21,11 @@ public class HopHead : MonoBehaviour {
 		grounded = false;
 	}
 
-	public void TossHead()
+	public void TossHead(Quaternion rotation)
 	{
 		cameraEffect1.enabled = true;
 		cameraEffect2.enabled = true;
 		cameraControl.enabled = true;
-		//cameraControl.Start();
 	}
 
 	public void ReattachHead()

@@ -6,7 +6,8 @@ using System.Collections;
 public class ThrowHead : MonoBehaviour
 {
 	public const float AnimationSnapFactor = 0.1f;
-	[SerializeField] GameObject permanentlyAttachedCamera;
+	[SerializeField] SimpleMouseRotator ichabotsBody;
+	[SerializeField] SimpleMouseRotator permanentlyAttachedCamera;
 	[SerializeField] SimpleMouseRotator temporarilyAttachedCamera;
 	[SerializeField] HopHead headHopper;
 	[SerializeField] float throwForce = 30;
@@ -93,10 +94,11 @@ public class ThrowHead : MonoBehaviour
 			{
 				if(Vector3.Distance(temporarilyAttachedCamera.transform.position, permanentlyAttachedCamera.transform.position) < AnimationSnapFactor)
 				{
+					// Attache head
 					controller.isControlsEnabled = true;
 					isAnimatingHeadAttachement = false;
 					temporarilyAttachedCamera.transform.parent = permanentlyAttachedCamera.transform;
-					permanentlyAttachedCamera.SetActive(true);
+					permanentlyAttachedCamera.gameObject.SetActive(true);
 					temporarilyAttachedCamera.gameObject.SetActive(false);
 					temporarilyAttachedCamera.transform.localPosition = Vector3.zero;
 					temporarilyAttachedCamera.transform.localRotation = Quaternion.identity;
@@ -104,6 +106,9 @@ public class ThrowHead : MonoBehaviour
 					{
 						rotator.enabled = true;
 					}
+
+					// Update body
+					ichabotsBody.Start();
 				}
 				else
 				{
@@ -114,11 +119,16 @@ public class ThrowHead : MonoBehaviour
 			}
 			else if((enableHeadTossing == true) && (fireButtonPressed == true))
 			{
-				permanentlyAttachedCamera.SetActive(false);
+				// Deactivate the body camera
+				permanentlyAttachedCamera.gameObject.SetActive(false);
+
+				// Activate the head camera
 				temporarilyAttachedCamera.gameObject.SetActive(true);
 				temporarilyAttachedCamera.transform.parent = null;
 				temporarilyAttachedCamera.rigidbody.isKinematic = false;
 				temporarilyAttachedCamera.rigidbody.velocity = rigidbody.velocity;
+
+				// Throw the camera
 				temporarilyAttachedCamera.rigidbody.AddForce(permanentlyAttachedCamera.transform.forward * throwForce, ForceMode.VelocityChange);
 				temporarilyAttachedCamera.Start();
 				audio.PlayOneShot(throwHeadSound);
@@ -126,7 +136,12 @@ public class ThrowHead : MonoBehaviour
 				{
 					rotator.enabled = false;
 				}
-				headHopper.TossHead();
+
+				// Reset the body camera's orientation
+				permanentlyAttachedCamera.transform.localRotation = Quaternion.identity;
+				permanentlyAttachedCamera.Start();
+
+				headHopper.TossHead(permanentlyAttachedCamera.transform.rotation);
 				isHeadAttached = false;
 			}
 		}
