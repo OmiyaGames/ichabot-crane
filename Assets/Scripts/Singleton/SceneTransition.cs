@@ -18,7 +18,7 @@ public class SceneTransition : ISingletonScript
 	public float fadeOutDuration = 1f;
 	public float fadeOutSpeed = 5f;
 	
-	private int mNextLevel = -1;
+	private int mNextLevel = 1;
 	private Transition mTransitionState = Transition.NotTransitioning;
 	private float mTargetAlpha = 0;
 	private float mCurrentAlpha = 0;
@@ -31,7 +31,15 @@ public class SceneTransition : ISingletonScript
 			return mTransitionState;
 		}
 	}
-	
+
+	public int NextLevel
+	{
+		get
+		{
+			return mNextLevel;
+		}
+	}
+
 	public override void SingletonStart()
 	{
 		mTargetColor = guiTexture.color;
@@ -49,11 +57,15 @@ public class SceneTransition : ISingletonScript
 			// Loaded the correct scene, display fade-out transition
 			StartCoroutine(FadeOut());
 		}
+		else if(Application.loadedLevel == 0)
+		{
+			mTransitionState = Transition.NotTransitioning; 
+		}
 	}
 	
 	public void LoadLevel(int levelIndex)
 	{
-		if((State == Transition.NotTransitioning) && (levelIndex >= 0) && (levelIndex <= GameSettings.NumLevels))
+		if((State == Transition.NotTransitioning) && (levelIndex > 0) && (levelIndex <= (GameSettings.NumLevels + 1)))
 		{
 			// Play sound
 			audio.Play();
@@ -123,7 +135,19 @@ public class SceneTransition : ISingletonScript
 		mTransitionState = Transition.FadingIn;
 		yield return new WaitForSeconds(fadeInDuration);
 		mTransitionState = Transition.CompletelyFaded;
-		Application.LoadLevelAsync(mNextLevel);
+
+		// Check if we're in a webplayer
+		GameSettings settings = Singleton.Get<GameSettings>();
+		if (settings.IsWebplayer == true)
+		{
+			// If so, load the loading scene
+			Application.LoadLevelAsync(0);
+		}
+		else
+		{
+			// If not, directly load to the next level
+			Application.LoadLevelAsync(mNextLevel);
+		}
 	}
 	
 	IEnumerator FadeOut()

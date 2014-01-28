@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
 	public GUIText[] titleGuiText = null;
 	
 	public GUISkin skin = null;
-	
+
 	private float mTargetAlpha = 0;
 	private float mCurrentAlpha = 0;
 	private Color mCurrentColor = Color.white;
@@ -74,6 +74,11 @@ public class Menu : MonoBehaviour
 			{
 				numLevelsHalf += 1;
 			}
+			// Check if this isn't a webplayer
+			if(gameSettingInstance.IsWebplayer == false)
+			{
+				numLevelsHalf += 1;
+			}
 			buttonDimension.width = (Screen.width * buttonWidth);
 			buttonDimension.y = (Screen.height * startButtonPosition);
 			buttonDimension.x = (Screen.width / 2f) - (buttonDimension.width + (margin / 2f));
@@ -85,7 +90,7 @@ public class Menu : MonoBehaviour
 				GUI.enabled = (level <= gameSettingInstance.NumLevelsUnlocked);
 				if(GUI.Button(buttonDimension, buttonText) == true)
 				{
-					sceneTransitionInstance.LoadLevel(level);
+					sceneTransitionInstance.LoadLevel(level + 1);
 				}
 				buttonDimension.y += (buttonDimension.height + margin);
 			}
@@ -99,22 +104,26 @@ public class Menu : MonoBehaviour
 				GUI.enabled = (level <= gameSettingInstance.NumLevelsUnlocked);
 				if(GUI.Button(buttonDimension, buttonText) == true)
 				{
-					sceneTransitionInstance.LoadLevel(level);
+					sceneTransitionInstance.LoadLevel(level + 1);
 				}
 				buttonDimension.y += (buttonDimension.height + margin);
 			}
 			
 			// Re-enable the GUI
 			GUI.enabled = true;
-			
-			// Position the quit button
-			buttonDimension.width = (Screen.width * smallButtonWidth);
-			buttonDimension.height = (Screen.height * (smallButtonEndPosition - smallButtonStartPosition)) - margin;
-			buttonDimension.x = ((Screen.width - buttonDimension.width) / 2f);
-			buttonDimension.y = (Screen.height * smallButtonStartPosition);
-			if(GUI.Button(buttonDimension, ("Quit Game")) == true)
+
+			// Check if this isn't a webplayer
+			if(gameSettingInstance.IsWebplayer == false)
 			{
-				Application.Quit();
+				// Position the quit button
+				buttonDimension.width = (Screen.width * smallButtonWidth);
+				buttonDimension.height = (Screen.height * (smallButtonEndPosition - smallButtonStartPosition)) - margin;
+				buttonDimension.x = ((Screen.width - buttonDimension.width) / 2f);
+				buttonDimension.y = (Screen.height * smallButtonStartPosition);
+				if(GUI.Button(buttonDimension, ("Quit Game")) == true)
+				{
+					Application.Quit();
+				}
 			}
 		}
 	}
