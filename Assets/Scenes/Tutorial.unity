@@ -2464,7 +2464,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &493397296
 MonoBehaviour:
@@ -3582,6 +3582,7 @@ MonoBehaviour:
   forwardForce: 2
   cameraEffect1: {fileID: 1151813121}
   cameraEffect2: {fileID: 1151813122}
+  cameraControlHorizontal: {fileID: 790470673}
   cameraControl: {fileID: 1151813118}
 --- !u!82 &790470679
 AudioSource:
@@ -4901,7 +4902,7 @@ GameObject:
   m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &1024181631
 MeshCollider:
@@ -6071,7 +6072,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!15 &1237914734
 EllipsoidParticleEmitter:
@@ -7371,7 +7372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f707ca24f2de744587777758418b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  permanentlyAttachedCamera: {fileID: 821769593}
+  ichabotsBody: {fileID: 1424628939}
+  permanentlyAttachedCamera: {fileID: 821769599}
   temporarilyAttachedCamera: {fileID: 790470673}
   headHopper: {fileID: 790470678}
   throwForce: 35
@@ -9560,7 +9562,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!15 &1694061711
 EllipsoidParticleEmitter:
@@ -9704,7 +9706,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1704087086
 Transform:
@@ -10965,6 +10967,10 @@ Prefab:
     - target: {fileID: 400006, guid: 31a827bafeefecf459e8fa090559830c, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 31a827bafeefecf459e8fa090559830c, type: 2}
+      propertyPath: enableHeadTossing
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 31a827bafeefecf459e8fa090559830c, type: 2}
