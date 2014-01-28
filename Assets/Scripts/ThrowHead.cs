@@ -79,7 +79,8 @@ public class ThrowHead : MonoBehaviour
 			isFireButtonDown = false;
 		}
 
-		if(Input.GetKey(KeyCode.Escape) == true)
+		SceneTransition transition = Singleton.Get<SceneTransition>();
+		if((transition.State == SceneTransition.Transition.NotTransitioning) && (Input.GetKey(KeyCode.Escape) == true))
 		{
 			isPaused = true;
 			Time.timeScale = 0;
