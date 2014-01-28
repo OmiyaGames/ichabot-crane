@@ -7,7 +7,6 @@ public class LoadingBar : MonoBehaviour
 	public GUITexture[] allOtherTextures = new GUITexture[] {};
 	public GUIText[] allTexts = new GUIText[] {};
 
-	private float originalWidth = 0;
 	private Rect loadingBarDimensions;
 
 	public IEnumerator Start()
