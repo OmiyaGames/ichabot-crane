@@ -159,7 +159,7 @@ public class PauseMenu : MonoBehaviour
 		if(GUI.Button(buttonRect, "Return To Menu") == true)
 		{
 			Time.timeScale = 1;
-			transition.LoadLevel(0);
+			transition.LoadLevel(GameSettings.MenuLevel);
 		}
 		
 		// Add margin
