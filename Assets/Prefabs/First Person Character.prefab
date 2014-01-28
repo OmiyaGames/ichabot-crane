@@ -918,7 +918,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.71260405, y: 4.28135443, z: -4.8591485}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -1832,12 +1832,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f707ca24f2de744587777758418b5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  permanentlyAttachedCamera: {fileID: 100004}
+  ichabotsBody: {fileID: 11400008}
+  permanentlyAttachedCamera: {fileID: 11400002}
   temporarilyAttachedCamera: {fileID: 11400012}
   headHopper: {fileID: 11400022}
   throwForce: 35
   distanceFromBodyBeforePickingUp: 3
-  enableHeadTossing: 0
+  enableHeadTossing: 1
   headAttachementLerpFactor: 5
   headRotationLerpFactor: 5
   throwHeadSound: {fileID: 8300000, guid: f8115fd1686cf744db78898f7a2277a0, type: 3}
@@ -2065,6 +2066,7 @@ MonoBehaviour:
   forwardForce: 2
   cameraEffect1: {fileID: 11400030}
   cameraEffect2: {fileID: 11400028}
+  cameraControlHorizontal: {fileID: 11400012}
   cameraControl: {fileID: 11400010}
 --- !u!114 &11400024
 MonoBehaviour:
