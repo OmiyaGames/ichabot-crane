@@ -918,7 +918,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 2.71260405, y: 4.28135443, z: -4.8591485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -1837,7 +1837,7 @@ MonoBehaviour:
   headHopper: {fileID: 11400022}
   throwForce: 35
   distanceFromBodyBeforePickingUp: 3
-  enableHeadTossing: 1
+  enableHeadTossing: 0
   headAttachementLerpFactor: 5
   headRotationLerpFactor: 5
   throwHeadSound: {fileID: 8300000, guid: f8115fd1686cf744db78898f7a2277a0, type: 3}
@@ -2094,14 +2094,14 @@ MonoBehaviour:
   boxHeight: .5
   boxBottomMargin: .0199999996
   boxButtonWidth: .25
-  continueButtonHeight: .180000007
+  continueButtonHeight: .159999996
   restartLevelButtonHeight: .100000001
   returnToMenuButtonHeight: .100000001
   popUpSettings:
     appearLength: 3
     appearSpeed: 5
     popUpWidth: 600
-    popUpHeight: 50
+    popUpHeight: 40
     popUpMargin: 20
   skin: {fileID: 11400000, guid: cecb4ab2e149fcf40b39716aea5acc12, type: 2}
 --- !u!114 &11400028
