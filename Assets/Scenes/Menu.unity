@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 26524126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .800000012, z: -1}
+  m_LocalPosition: {x: .5, y: .779999971, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -118,7 +118,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26c3e7cfad4d2e47b95706eac36c44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  simulateWebplayer: 0
 --- !u!1001 &49091875
 Prefab:
   m_ObjectHideFlags: 0
@@ -284,7 +285,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51636532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .730000019, z: -1}
+  m_LocalPosition: {x: .5, y: .689999998, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -305,7 +306,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -536,57 +537,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 602034721}
---- !u!1 &397832644
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 397832645}
-  - 132: {fileID: 397832646}
-  m_Layer: 0
-  m_Name: Music by
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &397832645
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 397832644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .639999986, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 967641453}
---- !u!132 &397832646
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13200000, guid: f93251f11ace0284b95f9422aadfc307,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 397832644}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: 'Music "Sunken Suite" by: djpretzel'
-  m_Anchor: 1
-  m_Alignment: 0
-  m_PixelOffset: {x: 2, y: -2}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
-  m_Material: {fileID: 0}
-  m_FontSize: 52
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_PixelCorrect: 1
-  m_RichText: 1
 --- !u!1 &404861649
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +805,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 513769688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .75999999, z: 0}
+  m_LocalPosition: {x: .5, y: .735000014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -876,7 +826,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -988,7 +938,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 582976842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .949999988, z: -1}
+  m_LocalPosition: {x: .5, y: 1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -1228,7 +1178,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766493356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .680000007, z: 0}
+  m_LocalPosition: {x: .5, y: .639999986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -1249,7 +1199,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -1389,10 +1339,8 @@ Transform:
   - {fileID: 766493357}
   - {fileID: 1566089729}
   - {fileID: 51636533}
-  - {fileID: 1336415785}
   - {fileID: 1370547812}
   - {fileID: 1221262999}
-  - {fileID: 397832645}
   - {fileID: 513769689}
   - {fileID: 2146413902}
   - {fileID: 1356738918}
@@ -1767,7 +1715,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1221262998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .800000012, z: 0}
+  m_LocalPosition: {x: .5, y: .779999971, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -1788,7 +1736,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2037,57 +1985,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10000, y: 1, z: 10000}
   m_Center: {x: 0, y: -.5, z: 0}
---- !u!1 &1336415784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1336415785}
-  - 132: {fileID: 1336415786}
-  m_Layer: 0
-  m_Name: Music by
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1336415785
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: f93251f11ace0284b95f9422aadfc307, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336415784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .639999986, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 967641453}
---- !u!132 &1336415786
-GUIText:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13200000, guid: f93251f11ace0284b95f9422aadfc307,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336415784}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Text: 'Music "Sunken Suite" by: djpretzel'
-  m_Anchor: 1
-  m_Alignment: 0
-  m_PixelOffset: {x: 0, y: 0}
-  m_LineSpacing: 1
-  m_TabSize: 4
-  m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
-  m_Material: {fileID: 0}
-  m_FontSize: 52
-  m_FontStyle: 0
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_PixelCorrect: 1
-  m_RichText: 1
 --- !u!1 &1356738917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,7 +2008,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1356738917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .949999988, z: 0}
+  m_LocalPosition: {x: .5, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -2162,7 +2059,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1370547811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .730000019, z: 0}
+  m_LocalPosition: {x: .5, y: .689999998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -2183,7 +2080,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2467,7 +2364,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566089728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .680000007, z: -1}
+  m_LocalPosition: {x: .5, y: .639999986, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -2488,7 +2385,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -2582,10 +2479,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startButtonPosition: .430000007
-  endButtonPosition: .850000024
-  buttonWidth: .5
+  endButtonPosition: .970000029
+  buttonWidth: .400000006
   buttonMargin: .0199999996
-  smallButtonStartPosition: .850000024
+  smallButtonStartPosition: .899999976
   smallButtonEndPosition: 1
   smallButtonWidth: .200000003
   titleGuiText:
@@ -2595,12 +2492,10 @@ MonoBehaviour:
   - {fileID: 1566089730}
   - {fileID: 51636534}
   - {fileID: 1370547813}
-  - {fileID: 1336415786}
-  - {fileID: 397832646}
-  - {fileID: 513769690}
-  - {fileID: 2146413903}
   - {fileID: 1356738919}
   - {fileID: 582976844}
+  - {fileID: 513769690}
+  - {fileID: 2146413903}
   skin: {fileID: 11400000, guid: cecb4ab2e149fcf40b39716aea5acc12, type: 2}
 --- !u!114 &1672979704
 MonoBehaviour:
@@ -3644,7 +3539,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2146413901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .5, y: .75999999, z: -1}
+  m_LocalPosition: {x: .5, y: .735000014, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 967641453}
@@ -3665,7 +3560,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 12800000, guid: 062a523359de20541939c9c4ded6a898, type: 3}
   m_Material: {fileID: 0}
-  m_FontSize: 52
+  m_FontSize: 22
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
