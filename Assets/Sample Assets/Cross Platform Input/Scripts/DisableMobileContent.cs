@@ -27,7 +27,7 @@ public class DisableMobileContent : MonoBehaviour {
 
     void SwicthEnableControlsStatus()
     {
-        if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.iPhone 
+        if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.iOS 
             || EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android 
             || EditorUserBuildSettings.activeBuildTarget == BuildTarget.WP8Player) {
             enableMobileControls = true;

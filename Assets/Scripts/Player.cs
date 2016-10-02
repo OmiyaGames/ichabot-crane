@@ -17,10 +17,10 @@ public class Player : MonoBehaviour
         Vector3 syncVelocity = Vector3.zero;
         if (stream.isWriting)
         {
-            syncPosition = rigidbody.position;
+            syncPosition = GetComponent<Rigidbody>().position;
             stream.Serialize(ref syncPosition);
 
-            syncPosition = rigidbody.velocity;
+            syncPosition = GetComponent<Rigidbody>().velocity;
             stream.Serialize(ref syncVelocity);
         }
         else
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             lastSynchronizationTime = Time.time;
 
             syncEndPosition = syncPosition + syncVelocity * syncDelay;
-            syncStartPosition = rigidbody.position;
+            syncStartPosition = GetComponent<Rigidbody>().position;
         }
     }
 
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (networkView.isMine)
+        if (GetComponent<NetworkView>().isMine)
         {
             InputMovement();
             InputColorChange();
@@ -59,23 +59,23 @@ public class Player : MonoBehaviour
     private void InputMovement()
     {
         if (Input.GetKey(KeyCode.W))
-            rigidbody.MovePosition(rigidbody.position + Vector3.forward * speed * Time.deltaTime);
+            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.forward * speed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.S))
-            rigidbody.MovePosition(rigidbody.position - Vector3.forward * speed * Time.deltaTime);
+            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.forward * speed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.D))
-            rigidbody.MovePosition(rigidbody.position + Vector3.right * speed * Time.deltaTime);
+            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.right * speed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.A))
-            rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
+            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.right * speed * Time.deltaTime);
     }
 
     private void SyncedMovement()
     {
         syncTime += Time.deltaTime;
 
-        rigidbody.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
+        GetComponent<Rigidbody>().position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
     }
 
 
@@ -87,9 +87,9 @@ public class Player : MonoBehaviour
 
     [RPC] void ChangeColorTo(Vector3 color)
     {
-        renderer.material.color = new Color(color.x, color.y, color.z, 1f);
+        GetComponent<Renderer>().material.color = new Color(color.x, color.y, color.z, 1f);
 
-        if (networkView.isMine)
-            networkView.RPC("ChangeColorTo", RPCMode.OthersBuffered, color);
+        if (GetComponent<NetworkView>().isMine)
+            GetComponent<NetworkView>().RPC("ChangeColorTo", RPCMode.OthersBuffered, color);
     }
 }

@@ -40,7 +40,7 @@ public class Collectable : MonoBehaviour
 	public void Detach()
 	{
 		// Fire
-		rigidbody.AddForce((Camera.main.transform.forward * fireVelocity), ForceMode.VelocityChange);
+		GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward * fireVelocity), ForceMode.VelocityChange);
 		
 		// Emit particles
 		if(fireParticles != null)
@@ -75,12 +75,12 @@ public class Collectable : MonoBehaviour
 		msLastCollectableAttached = -1f;
 		
 		// Calculate the mass
-		rigidbody.mass = transform.lossyScale.magnitude * massToSizeRatio;
+		GetComponent<Rigidbody>().mass = transform.lossyScale.magnitude * massToSizeRatio;
 		
 		// Update whether this object is attainable
 		if(Fisher.Instance != null)
 		{
-			mIsObtainable = (rigidbody.mass < Fisher.Instance.MaxObtainableMass);
+			mIsObtainable = (GetComponent<Rigidbody>().mass < Fisher.Instance.MaxObtainableMass);
 			mWasObtainable = mIsObtainable;
 		}
 		
@@ -126,7 +126,7 @@ public class Collectable : MonoBehaviour
 		if(Fisher.Instance != null)
 		{
 			// This is obtainable if the mass is less than the fisher's mass
-			mIsObtainable = (rigidbody.mass < Fisher.Instance.MaxObtainableMass);
+			mIsObtainable = (GetComponent<Rigidbody>().mass < Fisher.Instance.MaxObtainableMass);
 			
 			// Check if the fisher is maxed out
 			if((Fisher.Instance.IsMaxedOut == true) && (CompareTag(Fisher.UnconnectedTag) == true))

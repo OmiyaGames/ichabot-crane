@@ -16,14 +16,14 @@ public class Booster : MonoBehaviour
 		if(other.CompareTag("Player") == true)
 		{
 			playerBody = other.GetComponent<Rigidbody>();
-			audio.Stop();
-			audio.Play();
+			GetComponent<AudioSource>().Stop();
+			GetComponent<AudioSource>().Play();
 		}
 		else if(other.CompareTag("Player1") == true)
 		{
 			playerHead = other.GetComponent<Rigidbody>();
-			audio.Stop();
-			audio.Play();
+			GetComponent<AudioSource>().Stop();
+			GetComponent<AudioSource>().Play();
 		}
 	}
 

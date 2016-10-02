@@ -38,7 +38,7 @@ public class TestCubeSync : MonoBehaviour {
 	
 	void Update()
 	{
-		if (networkView.isMine)
+		if (GetComponent<NetworkView>().isMine)
 		{
 			InputMovement();
 		}

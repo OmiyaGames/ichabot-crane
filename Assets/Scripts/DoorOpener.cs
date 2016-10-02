@@ -30,7 +30,7 @@ public class DoorOpener : MonoBehaviour
 	void SwitchEnter(Collider isHead)
 	{
 		isOpen = true;
-		audio.PlayOneShot(openSound);
+		GetComponent<AudioSource>().PlayOneShot(openSound);
 	}
 
 	void SwitchExit(Collider isHead)
@@ -38,7 +38,7 @@ public class DoorOpener : MonoBehaviour
 		if(holdToOpen == true)
 		{
 			isOpen = false;
-			audio.PlayOneShot(closeSound);
+			GetComponent<AudioSource>().PlayOneShot(closeSound);
 		}
 	}
 	
@@ -51,6 +51,6 @@ public class DoorOpener : MonoBehaviour
 			targetPosition = openPosition;
 		}
 
-		rigidbody.MovePosition(Vector3.SmoothDamp(rigidbody.position, targetPosition, ref velocity, Time.deltaTime * smoothFactor));
+		GetComponent<Rigidbody>().MovePosition(Vector3.SmoothDamp(GetComponent<Rigidbody>().position, targetPosition, ref velocity, Time.deltaTime * smoothFactor));
 	}
 }

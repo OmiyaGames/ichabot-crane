@@ -32,7 +32,7 @@ public class FirstPersonCharacter : MonoBehaviour
     void Awake ()
 	{
         // Set up a reference to the capsule collider.
-	    capsule = collider as CapsuleCollider;
+	    capsule = GetComponent<Collider>() as CapsuleCollider;
 		grounded = true;
 		isControlsEnabled = true;
 		headThrowController = GetComponent<ThrowHead>();
@@ -77,7 +77,7 @@ public class FirstPersonCharacter : MonoBehaviour
 	       
         float nearest = Mathf.Infinity;
 	
-		if (grounded || rigidbody.velocity.y < 0.1f)
+		if (grounded || GetComponent<Rigidbody>().velocity.y < 0.1f)
 		{
 			// Default value if nothing is detected:
 			grounded = false;
@@ -124,7 +124,7 @@ public class FirstPersonCharacter : MonoBehaviour
 		characterAnimator.SetFloat("speed", desiredMove.sqrMagnitude);
 
 		// preserving current y velocity (for falling, gravity)
-		float yv = rigidbody.velocity.y;
+		float yv = GetComponent<Rigidbody>().velocity.y;
 
 		// add jump power
 		if (grounded && jump) {
@@ -135,17 +135,17 @@ public class FirstPersonCharacter : MonoBehaviour
 		}
 
 		// Set the rigidbody's velocity according to the ground angle and desired move
-		rigidbody.velocity = desiredMove + Vector3.up * yv;
+		GetComponent<Rigidbody>().velocity = desiredMove + Vector3.up * yv;
 
         // Use low/high friction depending on whether we're moving or not
         if (desiredMove.magnitude > 0 || !grounded)
 		{
-            collider.material = advanced.zeroFrictionMaterial;
+            GetComponent<Collider>().material = advanced.zeroFrictionMaterial;
 		} else {
-			collider.material = advanced.highFrictionMaterial;
+			GetComponent<Collider>().material = advanced.highFrictionMaterial;
 		}
 
 		// add extra gravity
-        rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
+        GetComponent<Rigidbody>().AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
 	}
 }

@@ -36,7 +36,7 @@ public class Switch : MonoBehaviour {
 
 	void Start()
 	{
-		collider.isTrigger = true;
+		GetComponent<Collider>().isTrigger = true;
 		originalPosition = transform.localPosition;
 		pressedPosition = originalPosition + transform.forward * moveDownBy;
 		//pressedPosition = transform.position;
@@ -52,13 +52,13 @@ public class Switch : MonoBehaviour {
 			if((other.CompareTag("Player") == true) && (triggerOnBody == true))
 			{
 				isPressed = true;
-				audio.PlayOneShot(pressedSound);
+				GetComponent<AudioSource>().PlayOneShot(pressedSound);
 				OnSwitchEnter(other);
 			}
 			else if((other.CompareTag("Player1") == true) && (triggerOnHead == true))
 			{
 				isPressed = true;
-				audio.PlayOneShot(pressedSound);
+				GetComponent<AudioSource>().PlayOneShot(pressedSound);
 				OnSwitchEnter(other);
 			}
 		}
@@ -71,13 +71,13 @@ public class Switch : MonoBehaviour {
 			if((other.CompareTag("Player") == true) && (triggerOnBody == true))
 			{
 				isPressed = false;
-				audio.PlayOneShot(upSound);
+				GetComponent<AudioSource>().PlayOneShot(upSound);
 				OnSwitchExit(other);
 			}
 			else if((other.CompareTag("Player1") == true) && (triggerOnHead == true))
 			{
 				isPressed = false;
-				audio.PlayOneShot(upSound);
+				GetComponent<AudioSource>().PlayOneShot(upSound);
 				OnSwitchExit(other);
 			}
 		}

@@ -8,7 +8,7 @@ public class UnmovableObject : MonoBehaviour
 	{
 		// Set all materials' color and texture
 		Texture randomTexture = Singleton.Get<RandomizeSetup>().RandomTexture;
-		foreach(Material mat in renderer.materials)
+		foreach(Material mat in GetComponent<Renderer>().materials)
 		{
 			if(mat != null)
 			{

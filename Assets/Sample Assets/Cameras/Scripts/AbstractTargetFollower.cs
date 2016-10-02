@@ -27,7 +27,7 @@ public abstract class AbstractTargetFollower : MonoBehaviour
 
         // we update from here if updatetype is set to Fixed, or in auto mode,
 		// if the target has a rigidbody, and isn't kinematic.
-		if (updateType == UpdateType.FixedUpdate || updateType == UpdateType.Auto && (target.rigidbody != null && !target.rigidbody.isKinematic)) {
+		if (updateType == UpdateType.FixedUpdate || updateType == UpdateType.Auto && (target.GetComponent<Rigidbody>() != null && !target.GetComponent<Rigidbody>().isKinematic)) {
 			if (autoTargetPlayer && !target.gameObject.activeSelf) {
 				FindAndTargetPlayer();
 			}
@@ -40,7 +40,7 @@ public abstract class AbstractTargetFollower : MonoBehaviour
 
 		// we update from here if updatetype is set to Late, or in auto mode,
 		// if the target does not have a rigidbody, or - does have a rigidbody but is set to kinematic.
-		if (updateType == UpdateType.LateUpdate || updateType == UpdateType.Auto && (target.rigidbody == null || target.rigidbody.isKinematic)) {
+		if (updateType == UpdateType.LateUpdate || updateType == UpdateType.Auto && (target.GetComponent<Rigidbody>() == null || target.GetComponent<Rigidbody>().isKinematic)) {
 			if (autoTargetPlayer && !target.gameObject.activeSelf) {
 				FindAndTargetPlayer();
 			}

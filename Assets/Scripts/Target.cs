@@ -35,7 +35,7 @@ public class Target : MonoBehaviour
 	{
 		++msNumTargets;
 		Goal.IsEnabled = false;
-		collider.isTrigger = true;
+		GetComponent<Collider>().isTrigger = true;
 		connectionLine.SetPosition(0, transform.position);
 		connectionLine.SetPosition(1, Goal.Position);
 	}

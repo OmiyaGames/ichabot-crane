@@ -15,10 +15,10 @@ public class PlayerSync : MonoBehaviour
         Vector3 syncVelocity = Vector3.zero;
         if (stream.isWriting)
         {
-            syncPosition = rigidbody.position;
+            syncPosition = GetComponent<Rigidbody>().position;
             stream.Serialize(ref syncPosition);
 
-            syncPosition = rigidbody.velocity;
+            syncPosition = GetComponent<Rigidbody>().velocity;
             stream.Serialize(ref syncVelocity);
         }
         else
@@ -31,7 +31,7 @@ public class PlayerSync : MonoBehaviour
             lastSynchronizationTime = Time.time;
 
             syncEndPosition = syncPosition + syncVelocity * syncDelay;
-            syncStartPosition = rigidbody.position;
+            syncStartPosition = GetComponent<Rigidbody>().position;
         }
     }
 
@@ -42,7 +42,7 @@ public class PlayerSync : MonoBehaviour
 
     void Update()
     {
-        if (networkView.isMine)
+        if (GetComponent<NetworkView>().isMine)
         {
         }
         else
@@ -55,6 +55,6 @@ public class PlayerSync : MonoBehaviour
     {
         syncTime += Time.deltaTime;
 
-        rigidbody.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
+        GetComponent<Rigidbody>().position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
     }
 }

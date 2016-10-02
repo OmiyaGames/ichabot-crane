@@ -42,12 +42,12 @@ public class SceneTransition : ISingletonScript
 
 	public override void SingletonStart()
 	{
-		mTargetColor = guiTexture.color;
+		mTargetColor = GetComponent<GUITexture>().color;
 		mTargetAlpha = 0;
 		mCurrentAlpha = 0;
 		mTargetColor.a = mTargetAlpha;
-		guiTexture.color = mTargetColor;
-		guiTexture.enabled = false;
+		GetComponent<GUITexture>().color = mTargetColor;
+		GetComponent<GUITexture>().enabled = false;
 	}
 	
 	public override void SceneStart()
@@ -68,7 +68,7 @@ public class SceneTransition : ISingletonScript
 		if((State == Transition.NotTransitioning) && (levelIndex > 0) && (levelIndex <= (GameSettings.NumLevels + 1)))
 		{
 			// Play sound
-			audio.Play();
+			GetComponent<AudioSource>().Play();
 
 			// Set the next level
 			mNextLevel = levelIndex;
@@ -85,20 +85,20 @@ public class SceneTransition : ISingletonScript
 		{
 			case Transition.FadingIn:
 			{
-				if(guiTexture.enabled == false)
+				if(GetComponent<GUITexture>().enabled == false)
 				{
-					mTargetColor = guiTexture.color;
+					mTargetColor = GetComponent<GUITexture>().color;
 					mTargetAlpha = 1;
 					mCurrentAlpha = 0;
 					mTargetColor.a = mTargetAlpha;
-					guiTexture.color = mTargetColor;
-					guiTexture.enabled = true;
+					GetComponent<GUITexture>().color = mTargetColor;
+					GetComponent<GUITexture>().enabled = true;
 				}
 				else
 				{
 					mCurrentAlpha = Mathf.Lerp(mCurrentAlpha, mTargetAlpha, (Time.deltaTime * fadeInSpeed));
 					mTargetColor.a = mCurrentAlpha;
-					guiTexture.color = mTargetColor;
+					GetComponent<GUITexture>().color = mTargetColor;
 				}
 				break;
 			}
@@ -106,24 +106,24 @@ public class SceneTransition : ISingletonScript
 			{
 				mCurrentAlpha = Mathf.Lerp(mCurrentAlpha, mTargetAlpha, (Time.deltaTime * fadeOutSpeed));
 				mTargetColor.a = mCurrentAlpha;
-				guiTexture.color = mTargetColor;
+				GetComponent<GUITexture>().color = mTargetColor;
 				break;
 			}
 			case Transition.CompletelyFaded:
 			{
-				mTargetColor = guiTexture.color;
+				mTargetColor = GetComponent<GUITexture>().color;
 				mTargetAlpha = 0;
 				mCurrentAlpha = 1;
 				mTargetColor.a = mCurrentAlpha;
-				guiTexture.color = mTargetColor;
-				guiTexture.enabled = true;
+				GetComponent<GUITexture>().color = mTargetColor;
+				GetComponent<GUITexture>().enabled = true;
 				break;
 			}
 			default:
 			{
-				if(guiTexture.enabled == true)
+				if(GetComponent<GUITexture>().enabled == true)
 				{
-					guiTexture.enabled = false;
+					GetComponent<GUITexture>().enabled = false;
 				}
 				break;
 			}
