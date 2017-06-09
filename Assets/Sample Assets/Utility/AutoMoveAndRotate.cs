@@ -1,35 +1,41 @@
-﻿using UnityEngine;
-using System.Collections;
+using System;
+using UnityEngine;
 
-public class AutoMoveAndRotate : MonoBehaviour {
+namespace UnityStandardAssets.Utility
+{
+    public class AutoMoveAndRotate : MonoBehaviour
+    {
+        public Vector3andSpace moveUnitsPerSecond;
+        public Vector3andSpace rotateDegreesPerSecond;
+        public bool ignoreTimescale;
+        private float m_LastRealTime;
 
-	public Vector3andSpace moveUnitsPerSecond;
-	public Vector3andSpace rotateDegreesPerSecond;
-	public bool ignoreTimescale;
-	float lastRealTime;
 
-	void Start()
-	{
-		lastRealTime = Time.realtimeSinceStartup;
-	}
+        private void Start()
+        {
+            m_LastRealTime = Time.realtimeSinceStartup;
+        }
 
-	// Update is called once per frame
-	void Update () {
-		float deltaTime = Time.deltaTime;
-		if (ignoreTimescale)
-		{
-			deltaTime = (Time.realtimeSinceStartup-lastRealTime);
-			lastRealTime = Time.realtimeSinceStartup;
-		}
-		transform.Translate (moveUnitsPerSecond.value * deltaTime, moveUnitsPerSecond.space);
-		transform.Rotate (rotateDegreesPerSecond.value * deltaTime, moveUnitsPerSecond.space);
-	}
 
-	[System.Serializable]
-	public class Vector3andSpace
-	{
-		public Vector3 value;
-		public Space space = Space.Self;
-	}
+        // Update is called once per frame
+        private void Update()
+        {
+            float deltaTime = Time.deltaTime;
+            if (ignoreTimescale)
+            {
+                deltaTime = (Time.realtimeSinceStartup - m_LastRealTime);
+                m_LastRealTime = Time.realtimeSinceStartup;
+            }
+            transform.Translate(moveUnitsPerSecond.value*deltaTime, moveUnitsPerSecond.space);
+            transform.Rotate(rotateDegreesPerSecond.value*deltaTime, moveUnitsPerSecond.space);
+        }
 
+
+        [Serializable]
+        public class Vector3andSpace
+        {
+            public Vector3 value;
+            public Space space = Space.Self;
+        }
+    }
 }
