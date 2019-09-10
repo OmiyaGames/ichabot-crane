@@ -7,7 +7,7 @@ public static class CrossPlatformInput {
     static CrossPlatformInput () {
 #if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8
         virtualInput = new MobileInput ();
-#elif UNITY_STANDALONE || UNITY_WEBPLAYER
+#else
         virtualInput = new StandaloneInput();
 #endif
     }

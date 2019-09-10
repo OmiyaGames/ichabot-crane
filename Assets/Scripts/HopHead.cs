@@ -17,7 +17,7 @@ public class HopHead : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Set up a reference to the capsule collider.
-		headCollider = collider as SphereCollider;
+		headCollider = GetComponent<Collider>() as SphereCollider;
 		grounded = false;
 	}
 
@@ -38,7 +38,7 @@ public class HopHead : MonoBehaviour {
 		// add jump power
 		if (grounded == true)
 		{
-			rigidbody.AddForce(transform.up * upForce + transform.forward * forwardForce, ForceMode.VelocityChange);
+			GetComponent<Rigidbody>().AddForce(transform.up * upForce + transform.forward * forwardForce, ForceMode.VelocityChange);
 			grounded = false;
 		}
 	}
@@ -47,8 +47,8 @@ public class HopHead : MonoBehaviour {
 	{
 		cameraEffect1.enabled = false;
 		cameraEffect2.enabled = false;
-		audio.Stop();
-		audio.Play();
+		GetComponent<AudioSource>().Stop();
+		GetComponent<AudioSource>().Play();
 	}
 	
 	// Update is called once per frame
@@ -64,7 +64,7 @@ public class HopHead : MonoBehaviour {
 		
 		
 		float nearest = Mathf.Infinity;
-		if (grounded || rigidbody.velocity.y < 0.1f)
+		if (grounded || GetComponent<Rigidbody>().velocity.y < 0.1f)
 		{
 			// Default value if nothing is detected:
 			grounded = false;

@@ -125,7 +125,7 @@ public class Fisher : MonoBehaviour
 		if((newCollectable != null) && (mOtherPoints.Count < numLineRendererPoints))
 		{
 			// Grab the last held object, and create a spring joint
-			Rigidbody newPoint = newCollectable.rigidbody;
+			Rigidbody newPoint = newCollectable.GetComponent<Rigidbody>();
 			returnFlag = true;
 			if(mOtherPoints.Count > 0)
 			{
@@ -177,7 +177,7 @@ public class Fisher : MonoBehaviour
 			{
 				// Grab the last point
 				freeCollectable = mOtherPoints[mOtherPoints.Count - 1];
-				Rigidbody freePoint = freeCollectable.rigidbody;
+				Rigidbody freePoint = freeCollectable.GetComponent<Rigidbody>();
 				
 				// Return the point to its original stats
 				RigidBodyStats lastStats = mLastPointStats[mLastPointStats.Count - 1];
@@ -217,7 +217,7 @@ public class Fisher : MonoBehaviour
 		{
 			SpringJoint joint = anchor.gameObject.AddComponent<SpringJoint>();
 			joint.spring = springStrength;
-			joint.connectedBody = bait.rigidbody;
+			joint.connectedBody = bait.GetComponent<Rigidbody>();
 			AddPoint(bait);
 		}
 		msInstance = this;
@@ -258,7 +258,7 @@ public class Fisher : MonoBehaviour
 			{
 				direction.Normalize();
 			}
-			mOtherPoints[index].rigidbody.AddForce((direction * followVelocity), ForceMode.VelocityChange);
+			mOtherPoints[index].GetComponent<Rigidbody>().AddForce((direction * followVelocity), ForceMode.VelocityChange);
 		}
 	}
 	

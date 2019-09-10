@@ -6,7 +6,7 @@ public class PlaySoundOnCollision : MonoBehaviour
 {
 	void OnCollisionEnter()
 	{
-		audio.Stop();
-		audio.Play();
+		GetComponent<AudioSource>().Stop();
+		GetComponent<AudioSource>().Play();
 	}
 }

@@ -126,13 +126,13 @@ public class ThrowHead : MonoBehaviour
 				// Activate the head camera
 				temporarilyAttachedCamera.gameObject.SetActive(true);
 				temporarilyAttachedCamera.transform.parent = null;
-				temporarilyAttachedCamera.rigidbody.isKinematic = false;
-				temporarilyAttachedCamera.rigidbody.velocity = rigidbody.velocity;
+				temporarilyAttachedCamera.GetComponent<Rigidbody>().isKinematic = false;
+				temporarilyAttachedCamera.GetComponent<Rigidbody>().velocity = GetComponent<Rigidbody>().velocity;
 
 				// Throw the camera
-				temporarilyAttachedCamera.rigidbody.AddForce(permanentlyAttachedCamera.transform.forward * throwForce, ForceMode.VelocityChange);
+				temporarilyAttachedCamera.GetComponent<Rigidbody>().AddForce(permanentlyAttachedCamera.transform.forward * throwForce, ForceMode.VelocityChange);
 				temporarilyAttachedCamera.Start();
-				audio.PlayOneShot(throwHeadSound);
+				GetComponent<AudioSource>().PlayOneShot(throwHeadSound);
 				foreach(SimpleMouseRotator rotator in allMouseRotationScripts)
 				{
 					rotator.enabled = false;
@@ -151,13 +151,13 @@ public class ThrowHead : MonoBehaviour
 			PauseMenu.ShowMessage("Click to pick up head");
 			if(fireButtonPressed == true)
 			{
-				temporarilyAttachedCamera.rigidbody.isKinematic = true;
+				temporarilyAttachedCamera.GetComponent<Rigidbody>().isKinematic = true;
 				isHeadAttached = true;
 				isAnimatingHeadAttachement = true;
 				headHopper.ReattachHead();
 				PauseMenu.HideMessage();
 				controller.isControlsEnabled = false;
-				audio.PlayOneShot(pickupHeadSound);
+				GetComponent<AudioSource>().PlayOneShot(pickupHeadSound);
 			}
 		}
 		else
